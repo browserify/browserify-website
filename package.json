@@ -1,0 +1,16 @@
+{
+  "name" : "browserify-website",
+  "version" : "0.0.0",
+  "scripts" : {
+    "start" : "node server.js 5000 /tmp/repo",
+    "build-dev" : "browserify browser/main.js -o static/bundle.js --watch --debug --verbose"
+  },
+  "dependencies" : {
+    "JSONStream" : "~0.4.3",
+    "ecstatic" : "~0.3.0",
+    "glog" : "~0.0.0"
+  },
+  "devDependencies" : {
+    "browserify" : "~1.16.6"
+  }
+}
