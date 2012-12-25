@@ -155,3 +155,25 @@ body {
 .preview .right.arrow:hover {
     border-right-color: white;
 }
+
+#clone-me {
+    border-color: rgb(90,140,230);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    
+    width: 600px;
+    text-align: center;
+    padding: 5px;
+    
+    color: rgb(140,190,230);
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#clone-me .code {
+    color: white;
+    font-family: monospace;
+    font-size: 18px;
+}

@@ -13,3 +13,8 @@ http.get({ path : '/blog.json?inline=html' }, function (res) {
     });
     res.pipe(parser);
 });
+
+var cloneCode = document.querySelector('#clone-me .code');
+cloneCode.textContent = cloneCode.textContent
+    .replace(/\$REMOTE/, 'http://' + window.location.host + '/blog.git')
+;
