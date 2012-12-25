@@ -75,7 +75,8 @@ body {
 }
 
 #previews {
-    
+    position: relative;
+    display: inline-block;
 }
 
 .preview {
@@ -87,7 +88,7 @@ body {
     
     background-color: rgb(60,105,145);
     width: 400px;
-    height: 100px;
+    height: 50px;
     
     color: rgb(200,220,235);
     padding: 10px;
@@ -95,4 +96,62 @@ body {
 
 .preview.active {
     display: block;
+}
+
+.preview a:link, .preview a:visited {
+    color: rgb(200,220,235);
+    text-decoration: none;
+}
+
+.preview a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.preview .label {
+    color: rgb(140,190,230);
+}
+
+.preview .arrows {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+}
+
+.preview .arrow {
+    display: inline-block;
+    width: 0px; 
+    height: 0px; 
+}
+
+.preview .arrow:hover {
+    cursor: pointer;
+}
+
+.preview .left.arrow {
+    margin-right: -15px;
+    border-left: 15px solid rgb(200,220,235);
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.preview .left.arrow:hover {
+    border-left-color: white;
+}
+
+.preview .right.arrow {
+    margin-left: -15px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid rgb(200,220,235);
+    border-bottom: 15px solid transparent;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.preview .right.arrow:hover {
+    border-right-color: white;
 }
