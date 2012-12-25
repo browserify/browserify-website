@@ -1,33 +1,15 @@
-var http = require('http');
 var JSONStream = require('JSONStream');
-var hyperglue = require('./hyperglue');
+var http = require('http');
+
+var articles = require('./article')(document.querySelector('#articles'));
+var previews = require('./preview')(document.querySelector('#previews'));
 
 http.get({ path : '/blog.json?inline=html' }, function (res) {
     var parser = JSONStream.parse([ true ]);
-    var articles = document.querySelector('#articles');
     
     parser.on('data', function (doc) {
-        var div = createArticle(doc);
-        articles.appendChild(div);
+        articles.push(doc);
+        previews.push(doc);
     });
     res.pipe(parser);
 });
-
-var templates = {
-    article : require('./html/article.js')
-};
-
-function createArticle (doc) {
-    var name = doc.title.replace(/[^A-Za-z0-9]+/g,'_');
-    return hyperglue(templates.article, {
-        '.title a' : {
-            name : '#' + name,
-            href : '#' + name,
-            _text : doc.title
-        },
-        '.commit' : doc.commit,
-        '.author' : doc.author,
-        '.date' : doc.date,
-        '.body' : { _html : doc.body }
-    });
-}
