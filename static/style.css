@@ -38,11 +38,35 @@ body {
 
 .article .inner {
     background-color: rgb(230,240,245);
-    padding: 20px;
     border-radius: 3px;
 }
 
-.article .inner .body h1 {
+.article .headers {
+    background-color: rgb(200,220,235);
+    padding: 10px;
+}
+
+.article .header {
+    font-size: 12px;
+    color: rgb(20,40,65);
+}
+
+.article .header .key {
+    display: inline-block;
+    width: 80px;
+}
+
+.article .header .value {
+    display: inline-block;
+}
+
+.article .body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.article .body h1 {
     border-bottom-width: 2px;
     border-bottom-color: rgb(90,140,230);
     border-bottom-style: dashed;
