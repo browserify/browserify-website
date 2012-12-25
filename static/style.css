@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(20,40,65);
+    font-family: Ubuntu, Helvetica, sans-serif;
+}
+
+.article {
+    border-color: rgb(90,140,230);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    
+    background-color: rgb(60,105,145);
+    
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    padding: 5px;
+}
+
+.article .title {
+    font-size: 24px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.article .title a:link, .article .title a:visited {
+    color: rgb(230,240,245);
+    text-decoration: none;
+}
+
+.article .title a:hover {
+    color: rgb(230,240,245);
+    text-decoration: underline;
+}
+
+.article .inner {
+    background-color: rgb(230,240,245);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.article .inner .body h1 {
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(90,140,230);
+    border-bottom-style: dashed;
+}

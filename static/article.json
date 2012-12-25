@@ -1,0 +1,19 @@
+[ "div.article", [
+  [ "div.title", [ "a" ] ],
+  [ "div.inner", [
+    [ "div.header", [
+      [ "div.key", "commit" ],
+      [ "div.value.commit" ]
+    ] ],
+    [ "div.header", [
+      [ "div.key", "Author:" ],
+      [ "div.value.author" ]
+    ] ],
+    [ "div.header", [
+      [ "div.key", "Date:" ],
+      [ "div.value.date" ]
+    ] ],
+    [ "hr" ],
+    [ "div.body" ]
+  ] ]
+] ]
