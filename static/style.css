@@ -74,7 +74,12 @@ body {
     color: rgb(20,40,65);
 }
 
+#previews {
+    
+}
+
 .preview {
+    display: none;
     border-color: rgb(90,140,230);
     border-style: solid;
     border-width: 2px;
@@ -82,8 +87,12 @@ body {
     
     background-color: rgb(60,105,145);
     width: 400px;
-    height: 140px;
+    height: 100px;
     
     color: rgb(200,220,235);
     padding: 10px;
+}
+
+.preview.active {
+    display: block;
 }
