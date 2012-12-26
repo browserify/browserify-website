@@ -1,4 +1,7 @@
+var EventEmitter = require('events').EventEmitter;
 var hyperglue = require('./hyperglue');
+
+var catchLinks = require('./catch_links');
 var html = require('./html/preview.js');
 
 module.exports = Preview;
@@ -25,6 +28,8 @@ function Preview (target) {
     });
 }
 
+Preview.prototype = new EventEmitter;
+
 Preview.prototype.push = function (doc) {
     var self = this;
     var index = self.length ++;
@@ -38,6 +43,9 @@ Preview.prototype.push = function (doc) {
     if (self.length === 1) {
         div.className = 'preview active';
     }
+    catchLinks(div, function (href) {
+        self.emit('link', href);
+    });
     
     var left = div.querySelector('.arrow.left');
     left.addEventListener('click', function () {
@@ -48,7 +56,7 @@ Preview.prototype.push = function (doc) {
         self.show((index + 1) % self.length);
     });
     
-    this.target.appendChild(div);
+    self.target.appendChild(div);
 };
 
 Preview.prototype.show = function (ix) {
