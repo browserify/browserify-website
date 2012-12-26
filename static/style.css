@@ -63,7 +63,7 @@ body {
     margin: auto;
 }
 
-#splash .code {
+.code {
     border-color: rgb(90,140,230);
     border-style: solid;
     border-width: 2px;
@@ -83,11 +83,11 @@ body {
     background-color: rgb(20,30,49);
 }
 
-#splash .code .require {
+.code .require {
     color: rgb(90,140,230);
 }
 
-#splash .code .require .string {
+.code .require .string {
     color: rgb(230,182,91);
 }
 
@@ -305,11 +305,6 @@ body {
 }
 
 #clone-me {
-    border-color: rgb(90,140,230);
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    
     width: 600px;
     text-align: center;
     padding: 5px;

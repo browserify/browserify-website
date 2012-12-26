@@ -6,7 +6,7 @@ module.exports = Article;
 function Article (target) {
     if (!(this instanceof Article)) return new Article(target);
     this.target = target;
-    this.articles = {};
+    this.articles = [];
     this.name = 'articles';
 }
 
@@ -24,20 +24,22 @@ Article.prototype.push = function (doc) {
         '.date' : doc.date,
         '.body' : { _html : doc.body }
     });
-    div.style.display = name === this.name || this.name === 'articles'
+    div.style.display
+    = name === this.name || this.name === 'articles'
         ? 'block' : 'none'
     ;
     
-    this.articles[name] = div;
+    this.articles.push({ name : name, element : div });
     this.target.appendChild(div);
 };
 
 Article.prototype.show = function (name) {
     this.name = name;
     
-    for (var key in articles) {
-        articles[key].style.display
-        = name === 'articles' || name === key
+    for (var i = 0; i < this.articles.length; i++) {
+        var article = this.articles[i];
+        var display = name === 'articles' || name === article.name
             ? 'block' : 'none';
+        article.element.style.display = display;
     }
 };
