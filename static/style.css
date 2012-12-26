@@ -4,6 +4,14 @@ body {
     padding-bottom: 80px;
 }
 
+.blue {
+    color: rgb(90,140,230);
+}
+
+.gold {
+    color: rgb(230,182,91);
+}
+
 #logo {
     text-align: center;
     margin-bottom: -50px;
@@ -25,14 +33,6 @@ body {
 
 #sections a:hover {
     color: rgb(140,190,230);
-}
-
-.blue {
-    color: rgb(90,140,230);
-}
-
-.gold {
-    color: rgb(230,182,91);
 }
 
 #tagline {
@@ -143,7 +143,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2em;
     
     padding: 5px;
 }
@@ -304,7 +304,7 @@ body {
     border-right-color: white;
 }
 
-#clone-me {
+#clone {
     width: 600px;
     text-align: center;
     padding: 5px;
