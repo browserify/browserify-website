@@ -8,6 +8,17 @@ body > h1 {
     text-align: center;
 }
 
+#logo {
+    text-align: center;
+}
+
+#sections {
+    display: inline-block;
+    width: 400px;
+    color: rgb(60,105,145);
+    font-size: 24px;
+}
+
 .article {
     border-color: rgb(90,140,230);
     border-style: solid;
