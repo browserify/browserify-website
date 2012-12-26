@@ -7,6 +7,7 @@ module.exports = [
       '<div class="image"></div>',
       '<div class="title">',
         '<a></a>',
+        '<span class="index"></span>',
       '</div>',
       '<div class="arrows">',
         '<div class="left arrow"></div>',

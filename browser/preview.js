@@ -32,7 +32,8 @@ Preview.prototype.push = function (doc) {
         '.title a' : {
             href : '/' + doc.title.replace(/[^A-Za-z0-9]+/g, '_'),
             _text : doc.title
-        }
+        },
+        '.index' : '[' + index + ']'
     });
     if (self.length === 1) {
         div.className = 'preview active';

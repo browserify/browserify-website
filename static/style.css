@@ -222,6 +222,7 @@ body {
 }
 
 .preview {
+    position: relative;
     display: none;
 }
 
@@ -302,6 +303,10 @@ body {
 
 .preview .right.arrow:hover {
     border-right-color: white;
+}
+
+.preview .index {
+    color: rgb(230,182,91);
 }
 
 #clone {
