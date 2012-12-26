@@ -27,7 +27,7 @@
     
     <div id="splash">
       <div class="step">
-        Write some browser code with
+        Write your browser code with
         <a href="http://nodejs.org/docs/latest/api/modules.html#modules_modules">node.js-style</a>
         <span class="require">requires</span>:
       </div>
@@ -47,7 +47,9 @@ elem.textContent = gamma(x);</pre>
 <pre class="code"><span class="blue">npm</span> install <span class="gold">gamma</span></pre>
 
       <div class="step">
-        Now recursively bundle up all the required modules into a single file with the
+        Now recursively bundle up all the required modules
+        starting at <span class="gold">main.js</span>
+        into a single file with the
         <span class="gold">browserify</span> command:
       </div>
       
@@ -60,21 +62,57 @@ elem.textContent = gamma(x);</pre>
       
 <pre class="code"><span class="blue">&lt;script</span> src="<span class="gold">bundle.js</span>"<span class="blue">&gt;&lt;/script&gt;</span></pre>
       
-      <ul>
-        <li>
-          use npm modules in the browser
-        </li>
-        <li>
-          test your modules in all the browsers with
-          <a href="http://ci.testling.com/">testling-ci</a>
-        </li>
-      </ul>
+      <h1>more</h1>
       
-      <div id="install">
-        <h1>install</h1>
-        <div>With <a href="https://npmjs.org">npm</a>, do:</div>
-        <pre class="code">npm install -g browserify</pre>
+      <div class="step">
+        <ul>
+          <li>
+            use npm modules in the browser
+          </li>
+          <li>
+            <span class="gold">process.nextTick()</span>,
+            <span class="gold">__dirname</span>,
+            and <span class="gold">__filename</span>
+            node-isms work
+          </li>
+          <li>
+            get browser versions of the node core libraries
+            <a href="http://nodejs.org/docs/latest/api/events.html">events</a>,
+            <a href="http://nodejs.org/docs/latest/api/stream.html">stream</a>,
+            <a href="http://nodejs.org/docs/latest/api/path.html">path</a>,
+            <a href="http://nodejs.org/docs/latest/api/url.html">url</a>,
+            <a href="http://nodejs.org/docs/latest/api/assert.html">assert</a>,
+            <a href="https://github.com/toots/buffer-browserify">buffer</a>,
+            <a href="http://nodejs.org/docs/latest/api/util.html">util</a>,
+            <a href="http://nodejs.org/docs/latest/api/querystring.html">querystring</a>,
+            <a href="https://github.com/substack/http-browserify">http</a>,
+            <a href="https://github.com/substack/vm-browserify">vm</a>,
+            and
+            <a href="https://github.com/dominictarr/crypto-browserify">crypto</a>
+            when you <span class="gold">require()</span> them
+          </li>
+          <li>
+            Test your modules in all the browsers with
+            <a href="http://ci.testling.com/">testling-ci</a>.
+            Many modules known to work with browserify will have a
+            <a href="http://ci.testling.com/">testling-ci</a> badge:
+            <div class="badge">
+              <a href="http://ci.testling.com/substack/ever"
+              ><img src="/images/testling_badge.png"></a>
+            </div>
+          </li>
+        </ul>
       </div>
+      
+      <h1>install</h1>
+      
+      <div class="step">
+        First install <a href="http://nodejs.org/">node</a>.
+        It comes with <a href="https://npmjs.org">npm</a>.
+        Then do:
+      </div>
+      
+<pre class="code"><span class="blue">npm</span> install -g <span class="gold">browserify</span></pre>
     </div>
     
     <div id="preview-box">

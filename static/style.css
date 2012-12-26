@@ -4,11 +4,6 @@ body {
     padding-bottom: 80px;
 }
 
-body > h1 {
-    color: rgb(230,240,245);
-    text-align: center;
-}
-
 #logo {
     text-align: center;
     margin-bottom: -50px;
@@ -43,8 +38,9 @@ body > h1 {
 #tagline {
     position: relative;
     color: rgb(90,140,230);
-    max-width: 690px;
     margin: auto;
+    max-width: 570px;
+    right: 60px;
     font-size: 32px;
     margin-bottom: 40px;
 }
@@ -58,9 +54,13 @@ body > h1 {
 }
 
 #splash {
-    max-width: 750px;
-    margin: auto;
     color: rgb(200,220,235);
+}
+
+#splash h1 {
+    max-width: 600px;
+    color: rgb(140,190,230);
+    margin: auto;
 }
 
 #splash .code {
@@ -106,6 +106,25 @@ body > h1 {
 
 #splash .step a:hover {
     color: rgb(230,182,91);
+}
+
+#splash .step ul {
+    list-style-image: url(/images/fireball.png);
+}
+
+#splash .step li {
+    margin-bottom: 1em;
+}
+
+#splash .step li .badge {
+    margin-top: 1em;
+}
+
+#splash .badge img {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(20,30,49);
+    border-radius: 10px;
 }
 
 #article-box {
