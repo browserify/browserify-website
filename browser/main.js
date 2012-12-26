@@ -26,13 +26,15 @@ cloneCode.textContent = cloneCode.textContent
     .replace(/\$REMOTE/, 'http://' + window.location.host + '/blog.git')
 ;
 
-if (window.location.pathname === '/articles') {
-    hide(divs.splash);
-    show(divs.articleBox);
-}
-else {
+var pathname = window.location.pathname;
+if (pathname === '/') {
     show(divs.splash);
     hide(divs.articleBox);
+}
+else {
+    hide(divs.splash);
+    show(divs.articleBox);
+    articles.show(pathname.replace(/^\//,''));
 }
 
 function hide (e) { e.style.display = 'none' }
