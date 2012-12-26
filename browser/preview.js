@@ -30,7 +30,7 @@ Preview.prototype.push = function (doc) {
     var index = self.length ++;
     var div = hyperglue(html, {
         '.title a' : {
-            href : '#' + doc.title.replace(/[^A-Za-z0-9]+/g, '_'),
+            href : '/' + doc.title.replace(/[^A-Za-z0-9]+/g, '_'),
             _text : doc.title
         }
     });

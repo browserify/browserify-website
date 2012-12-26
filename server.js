@@ -6,6 +6,10 @@ var server = http.createServer(function (req, res) {
     if (glog.test(req.url)) {
         glog(req, res);
     }
+    else if (/^\/[^\.\/]+$/.test(req.url)) {
+        req.url = '/';
+        ecstatic(req, res);
+    }
     else ecstatic(req, res);
 });
 server.listen(Number(process.argv[2]));

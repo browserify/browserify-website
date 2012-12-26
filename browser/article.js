@@ -13,7 +13,7 @@ Article.prototype.push = function (doc) {
     var div = hyperglue(html, {
         '.title a' : {
             name : name,
-            href : '#' + name,
+            href : '/' + name,
             _text : doc.title
         },
         '.commit' : doc.commit,
