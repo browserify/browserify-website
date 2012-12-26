@@ -1,7 +1,7 @@
 module.exports = [
   '<div class="preview">',
     '<div class="label">',
-      'recent articles',
+      'recent browserify articles',
     '</div>',
     '<div class="inner">',
       '<div class="image"></div>',

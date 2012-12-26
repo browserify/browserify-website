@@ -1,6 +1,7 @@
 body {
     background-color: rgb(20,40,65);
     font-family: Ubuntu, Helvetica, sans-serif;
+    padding-bottom: 80px;
 }
 
 body > h1 {
@@ -10,19 +11,19 @@ body > h1 {
 
 #logo {
     text-align: center;
+    margin-bottom: -50px;
 }
 
 #sections {
     display: inline-block;
-    vertical-align: top;
-    margin-top: 50px;
-    margin-left: -60px;
-    width: 200px;
+    vertical-align: bottom;
+    padding-bottom: 30px;
+    margin-left: -55px;
     font-size: 24px;
-    margin-bottom: 40px;
 }
 
-#sections a:link, #sections a:visited {
+#sections a:link,
+#sections a:visited {
     color: rgb(90,140,230);
     text-decoration: none;
 }
@@ -31,13 +32,20 @@ body > h1 {
     color: rgb(140,190,230);
 }
 
+.blue {
+    color: rgb(90,140,230);
+}
+
+.gold {
+    color: rgb(230,182,91);
+}
+
 #tagline {
     position: relative;
     color: rgb(90,140,230);
     max-width: 690px;
     margin: auto;
     font-size: 32px;
-    margin-top: -45px;
     margin-bottom: 40px;
 }
 
@@ -55,9 +63,49 @@ body > h1 {
     color: rgb(200,220,235);
 }
 
-#splash .step {
-    max-width: 500px;
+#splash .code {
+    border-color: rgb(90,140,230);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    
+    width: 600px;
+    padding: 5px;
+    
+    color: rgb(200,220,235);
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    font-family: monospace;
+    font-size: 1.2em;
+    
+    background-color: rgb(20,30,49);
+}
+
+#splash .code .require {
+    color: rgb(90,140,230);
+}
+
+#splash .code .require .string {
+    color: rgb(230,182,91);
+}
+
+#splash .step {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#splash .step a:link,
+#splash .step a:visited {
+    color: rgb(90,140,230);
+    text-decoration: none;
+}
+
+#splash .step a:hover {
+    color: rgb(230,182,91);
 }
 
 #article-box {
@@ -87,7 +135,8 @@ body > h1 {
     padding-left: 5px;
 }
 
-.article .title a:link, .article .title a:visited {
+.article .title a:link,
+.article .title a:visited {
     color: rgb(230,240,245);
     text-decoration: none;
 }
@@ -97,7 +146,7 @@ body > h1 {
     text-decoration: underline;
 }
 
-.article .inner {
+.article > .inner {
     background-color: rgb(230,240,245);
     border-radius: 3px;
     color: rgb(5,10,24);
@@ -136,8 +185,9 @@ body > h1 {
 }
 
 #preview-box {
-    max-width: 700px;
+    max-width: 650px;
     margin: auto;
+    margin-top: 40px;
 }
 
 #preview-box .hat {
@@ -154,6 +204,9 @@ body > h1 {
 
 .preview {
     display: none;
+}
+
+.preview > .inner {
     border-color: rgb(90,140,230);
     border-style: solid;
     border-width: 2px;
@@ -161,7 +214,6 @@ body > h1 {
     
     background-color: rgb(60,105,145);
     width: 400px;
-    height: 50px;
     
     color: rgb(200,220,235);
     padding: 10px;
@@ -171,7 +223,8 @@ body > h1 {
     display: block;
 }
 
-.preview a:link, .preview a:visited {
+.preview a:link,
+.preview a:visited {
     color: rgb(200,220,235);
     text-decoration: none;
 }
@@ -183,6 +236,9 @@ body > h1 {
 
 .preview .label {
     color: rgb(140,190,230);
+    font-size: 1.3em;
+    margin-left: 5px;
+    margin-bottom: 12px;
 }
 
 .preview .arrows {
@@ -243,10 +299,4 @@ body > h1 {
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-#clone-me .code {
-    color: white;
-    font-family: monospace;
-    font-size: 18px;
 }

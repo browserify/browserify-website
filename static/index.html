@@ -27,14 +27,38 @@
     
     <div id="splash">
       <div class="step">
-        Write your browser code with
+        Write some browser code with
         <a href="http://nodejs.org/docs/latest/api/modules.html#modules_modules">node.js-style</a>
-        <span class="require">requires</span>.
+        <span class="require">requires</span>:
       </div>
+       
+<pre class="code">var foo = <span class="require">require(<span class="string">'./foo'</span>)</span>;
+var bar = <span class="require">require(<span class="string">'../lib/bar'</span>)</span>;
+var gamma = <span class="require">require(<span class="string">'gamma'</span>)</span>;
+
+var elem = document.getElementById('result');
+var x = foo(100) + bar('baz');
+elem.textContent = gamma(x);</pre>
       
       <div class="step">
-        browserify main.js -o bundle.js
+        Install modules with <a href="https://npmjs.org">npm</a>:
       </div>
+ 
+<pre class="code"><span class="blue">npm</span> install <span class="gold">gamma</span></pre>
+
+      <div class="step">
+        Now recursively bundle up all the required modules into a single file with the
+        <span class="gold">browserify</span> command:
+      </div>
+      
+<pre class="code"><span class="blue">browserify</span> <span class="gold">main.js</span> -o <span class="gold">bundle.js</span></pre>
+      
+      <div class="step">
+        Drop a single <span class="gold">&lt;script&gt;</span>
+ tag into your html and you're done!
+      </div>
+      
+<pre class="code"><span class="blue">&lt;script</span> src="<span class="gold">bundle.js</span>"<span class="blue">&gt;&lt;/script&gt;</span></pre>
       
       <ul>
         <li>
@@ -49,7 +73,7 @@
       <div id="install">
         <h1>install</h1>
         <div>With <a href="https://npmjs.org">npm</a>, do:</div>
-        <div class="code">npm install -g browserify</div>
+        <pre class="code">npm install -g browserify</pre>
       </div>
     </div>
     
