@@ -56,6 +56,13 @@ elem.textContent = gamma(x);</pre>
 <pre class="code"><span class="blue">browserify</span> <span class="gold">main.js</span> -o <span class="gold">bundle.js</span></pre>
       
       <div class="step">
+        Browserify parses the
+        <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a>
+        for <span class="gold">require()</span> calls
+        to traverse the entire dependency graph of your project.
+      </div>
+      
+      <div class="step">
         Drop a single <span class="gold">&lt;script&gt;</span>
  tag into your html and you're done!
       </div>
@@ -107,8 +114,8 @@ elem.textContent = gamma(x);</pre>
       <h1>install</h1>
       
       <div class="step">
-        First install <a href="http://nodejs.org/">node</a>.
-        It comes with <a href="https://npmjs.org">npm</a>.
+        First install <a href="http://nodejs.org/">node</a>,
+        which ships with <a href="https://npmjs.org">npm</a>.
         Then do:
       </div>
       
