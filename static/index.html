@@ -6,22 +6,66 @@
     <div id="logo">
       <img src="/images/browserify.png" alt="browserify!">
       <div id="sections">
-        <div class="section">blog</div>
+        <div class="section">
+          <a href="https://github.com/substack/node-browserify">code</a>
+        </div>
+        <div class="section">
+          <a href="#articles">articles</a>
+        </div>
+        <div class="section">
+          <a href="https://npmjs.org/">find modules</a>
+        </div>
       </div>
     </div>
-    <div id="start">
-      Write modular browser code.
-      Use npm packages in the browser.
-      <div class="code">
+    
+    <div id="tagline">
+      <span class="require">
+        require(<span class="string">'modules'</span>)
+      </span>
+      in the browser
+    </div>
+    
+    <div id="splash">
+      <div class="step">
+        Write your browser code with
+        <a href="http://nodejs.org/docs/latest/api/modules.html#modules_modules">node.js-style</a>
+        <span class="require">requires</span>.
+      </div>
+      
+      <div class="step">
         browserify main.js -o bundle.js
       </div>
+      
+      <ul>
+        <li>
+          use npm modules in the browser
+        </li>
+        <li>
+          test your modules in all the browsers with
+          <a href="http://ci.testling.com/">testling-ci</a>
+        </li>
+      </ul>
+      
+      <div id="install">
+        <h1>install</h1>
+        <div>With <a href="https://npmjs.org">npm</a>, do:</div>
+        <div class="code">npm install -g browserify</div>
+      </div>
     </div>
-    <div id="previews"></div>
-    <div id="articles"></div>
     
-    <div id="clone-me">
-      <div class="code">
-        git clone $REMOTE
+    <div id="preview-box">
+      <div id="previews"></div>
+      <div class="hat">
+        <img src="/images/wizard_hat.png" alt="wizard hat">
+      </div>
+    </div>
+    
+    <div id="article-box">
+      <div id="articles"></div>
+      <div id="clone-me">
+        <div class="code">
+          git clone $REMOTE
+        </div>
       </div>
     </div>
     <script src="bundle.js"></script>

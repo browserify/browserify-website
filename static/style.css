@@ -14,9 +14,54 @@ body > h1 {
 
 #sections {
     display: inline-block;
-    width: 400px;
-    color: rgb(60,105,145);
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: -60px;
+    width: 200px;
     font-size: 24px;
+    margin-bottom: 40px;
+}
+
+#sections a:link, #sections a:visited {
+    color: rgb(90,140,230);
+    text-decoration: none;
+}
+
+#sections a:hover {
+    color: rgb(140,190,230);
+}
+
+#tagline {
+    position: relative;
+    color: rgb(90,140,230);
+    max-width: 690px;
+    margin: auto;
+    font-size: 32px;
+    margin-top: -45px;
+    margin-bottom: 40px;
+}
+
+#tagline .require {
+    color: rgb(140,190,230);
+}
+
+#tagline .require .string {
+    color: rgb(230,182,91);
+}
+
+#splash {
+    max-width: 750px;
+    margin: auto;
+    color: rgb(200,220,235);
+}
+
+#splash .step {
+    max-width: 500px;
+    margin: auto;
+}
+
+#article-box {
+    display: none;
 }
 
 .article {
@@ -88,6 +133,18 @@ body > h1 {
     border-bottom-color: rgb(90,140,230);
     border-bottom-style: dashed;
     color: rgb(20,40,65);
+}
+
+#preview-box {
+    max-width: 700px;
+    margin: auto;
+}
+
+#preview-box .hat {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -10px;
+    margin-bottom: -20px;
 }
 
 #previews {
@@ -192,8 +249,4 @@ body > h1 {
     color: white;
     font-family: monospace;
     font-size: 18px;
-}
-
-#start {
-    color: white;
 }
