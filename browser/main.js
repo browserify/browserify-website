@@ -44,7 +44,7 @@ var showPage = singlePage(function (href) {
     function show (e) { e.style.display = 'block' }
 });
 
-var catchLinks = require('./catch_links');
+var catchLinks = require('catch-links');
 catchLinks(document, showPage);
 articles.on('link', showPage);
 previews.on('link', showPage);

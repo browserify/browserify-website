@@ -10,7 +10,8 @@
     "ecstatic" : "~0.3.0",
     "glog" : "~0.0.0",
     "hyperglue" : "~0.0.0",
-    "single-page" : "~0.0.0"
+    "single-page" : "~0.0.0",
+    "catch-links" : "~0.0.0"
   },
   "devDependencies" : {
     "browserify" : "~1.16.6"
