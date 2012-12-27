@@ -50,6 +50,7 @@ function showPage (href) {
         show(divs.articleBox);
         articles.show(href);
     }
+    window.scrollTo(0);
     current = href;
     
     if (window.history && window.history.pushState) {
