@@ -10,6 +10,9 @@ module.exports = function (root, cb) {
     
     function onclick (href) {
         return function (ev) {
+            if (ev.altKey || ev.ctrlKey || ev.metaKey || ev.shiftKey) {
+                return true;
+            }
             ev.preventDefault();
             cb(href);
             return false;
