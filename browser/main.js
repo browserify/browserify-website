@@ -27,7 +27,7 @@ cloneCode.textContent = cloneCode.textContent
     .replace(/\$REMOTE/, 'http://' + window.location.host + '/blog.git')
 ;
 
-var singlePage = require('./single_page');
+var singlePage = require('single-page');
 var showPage = singlePage(function (href) {
     if (href === '/') {
         show(divs.splash);
