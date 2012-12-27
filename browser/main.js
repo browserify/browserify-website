@@ -19,10 +19,6 @@ http.get({ path : '/blog.json?inline=html' }, function (res) {
         previews.push(doc);
     });
     
-    parser.on('end', function () {
-        articles.end();
-    });
-    
     res.pipe(parser);
 });
 
