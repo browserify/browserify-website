@@ -31,18 +31,8 @@ cloneCode.textContent = cloneCode.textContent
     .replace(/\$REMOTE/, 'http://' + window.location.host + '/blog.git')
 ;
 
-var catchLinks = require('./catch_links');
-catchLinks(document, showPage);
-articles.on('link', showPage);
-previews.on('link', showPage);
-
-var hasPushState = window.history && window.history.pushState;
-
-var current = null;
-function showPage (href) {
-    href = href.replace(/^\/+/, '/');
-    if (current === href) return;
-    
+var singlePage = require('./single_page');
+var showPage = singlePage(function (href) {
     if (href === '/') {
         show(divs.splash);
         hide(divs.articleBox);
@@ -53,52 +43,12 @@ function showPage (href) {
         articles.show(href);
     }
     window.scrollTo(0);
-    current = href;
     
-    if (hasPushState) {
-        var mismatched = window.location.pathname !== href;
-        if (mismatched && href === '/') {
-            window.history.pushState(null, 'browserify', '/');
-        }
-        else if (mismatched && href === '/articles') {
-            window.history.pushState(null, 'browserify articles', 'articles');
-        }
-        else if (mismatched) {
-            articles.get(href, function (article) {
-                if (!article) return;
-                var title = article.doc && article.doc.title || '';
-                var name = article.name || '/';
-                window.history.pushState(null, title, name);
-            });
-        }
-    }
-    else if (window.location.hash !== '#!' + href) {
-        if (window.location.pathname !== '/') {
-            window.location.href = '/#!' + href;
-        }
-        else {
-            window.location.hash = '#!' + href;
-        }
-    }
-}
-
-window.addEventListener('hashchange', function () {
-    var href = window.location.hash.replace(/^#!\/?/, '/');
-    if (current !== href && /^#!/.test(window.location.hash)) {
-        showPage(href);
-    }
+    function hide (e) { e.style.display = 'none' }
+    function show (e) { e.style.display = 'block' }
 });
 
-window.addEventListener('popstate', popstate);
-function popstate () {
-    var href = /^#!/.test(window.location.hash)
-        ? window.location.hash.replace(/^#!/, '/')
-        : window.location.pathname
-    ;
-    showPage(href);
-}
-
-if (hasPushState) popstate();
-
-function hide (e) { e.style.display = 'none' }
-function show (e) { e.style.display = 'block' }
+var catchLinks = require('./catch_links');
+catchLinks(document, showPage);
+articles.on('link', showPage);
+previews.on('link', showPage);
