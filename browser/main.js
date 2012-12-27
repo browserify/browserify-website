@@ -36,6 +36,8 @@ catchLinks(document, showPage);
 articles.on('link', showPage);
 previews.on('link', showPage);
 
+var hasPushState = window.history && window.history.pushState;
+
 var current = null;
 function showPage (href) {
     href = href.replace(/^\/+/, '/');
@@ -53,7 +55,7 @@ function showPage (href) {
     window.scrollTo(0);
     current = href;
     
-    if (window.history && window.history.pushState) {
+    if (hasPushState) {
         var mismatched = window.location.pathname !== href;
         if (mismatched && href === '/') {
             window.history.pushState(null, 'browserify', '/');
@@ -96,10 +98,7 @@ function popstate () {
     showPage(href);
 }
 
-if (window.history && window.history.pushState
-&& /^#!/.test(window.location.hash)) {
-}
-else popstate();
+if (hasPushState) popstate();
 
 function hide (e) { e.style.display = 'none' }
 function show (e) { e.style.display = 'block' }
