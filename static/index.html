@@ -32,18 +32,27 @@
         <span class="require">requires</span>:
       </div>
        
+      <div class="filename">main.js</div>
 <pre class="code">var foo = <span class="require">require(<span class="string">'./foo'</span>)</span>;
-var bar = <span class="require">require(<span class="string">'../lib/bar'</span>)</span>;
 var gamma = <span class="require">require(<span class="string">'gamma'</span>)</span>;
 
-var elem = document.getElementById('result');
-var x = foo(100) + bar('baz');
-elem.textContent = gamma(x);</pre>
+var n = gamma(foo(5) * 3);
+var txt = document.createTextNode(n);
+document.body.appendChild(txt);</pre>
+      
+      <div class="step">
+        Export functionality by assigning onto
+        <span class="gold">module.exports</span> or
+        <span class="gold">exports</span>:
+      </div>
+      
+      <div class="filename">foo.js</div>
+<pre class="code">module.exports = function (n) { return n * 11 }</pre>
       
       <div class="step">
         Install modules with <a href="https://npmjs.org">npm</a>:
       </div>
- 
+       
 <pre class="code"><span class="blue">npm</span> install <span class="gold">gamma</span></pre>
 
       <div class="step">
