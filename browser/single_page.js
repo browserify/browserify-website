@@ -35,10 +35,10 @@ Page.prototype.show = function (href) {
     href = href.replace(/^\/+/, '/');
     if (this.current === href) return;
     current = href;
+    this.cb(href);
     
     if (this.hasPushState) {
         var mismatched = window.location.pathname !== href;
-        this.cb(href);
         if (mismatched) window.history.pushState(null, '', href);
     }
     else if (window.location.hash !== '#!' + href) {
