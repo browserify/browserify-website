@@ -1,5 +1,5 @@
 var EventEmitter = require('events').EventEmitter;
-var hyperglue = require('./hyperglue');
+var hyperglue = require('hyperglue');
 
 var catchLinks = require('./catch_links');
 var html = require('./html/preview.js');
