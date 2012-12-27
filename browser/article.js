@@ -11,6 +11,7 @@ function Article (target) {
     this.target = target;
     this.articles = [];
     this.name = 'articles';
+    this._waiting = [];
 }
 
 Article.prototype = new EventEmitter;
@@ -41,12 +42,22 @@ Article.prototype.push = function (doc) {
     self.target.appendChild(div);
 };
 
-Article.prototype.get = function (href) {
+Article.prototype.end = function () {
+    this.ready = true;
+    var ws = this._waiting.splice(0);
+    for (var i = 0; i < ws.length; i++) {
+        this.get.apply(this, ws[i]);
+    }
+};
+
+Article.prototype.get = function (href, cb) {
+    if (!this.ready) return this._waiting.push([href,cb]);
     var name = href.replace(/^\//, '');
     for (var i = 0; i < this.articles.length; i++) {
         var article = this.articles[i];
-        if (article.name === name) return article;
+        if (article.name === name) return cb(article);
     }
+    cb();
 };
 
 Article.prototype.show = function (href) {

@@ -18,6 +18,11 @@ http.get({ path : '/blog.json?inline=html' }, function (res) {
         articles.push(doc);
         previews.push(doc);
     });
+    
+    parser.on('end', function () {
+        articles.end();
+    });
+    
     res.pipe(parser);
 });
 
@@ -31,8 +36,11 @@ catchLinks(document, showPage);
 articles.on('link', showPage);
 previews.on('link', showPage);
 
-function showPage (href_) {
-    var href = href_.replace(/^\/#!/, '/');
+var current = null;
+function showPage (href) {
+    href = href.replace(/^\/+/, '/');
+    if (current === href) return;
+    
     if (href === '/') {
         show(divs.splash);
         hide(divs.articleBox);
@@ -42,28 +50,55 @@ function showPage (href_) {
         show(divs.articleBox);
         articles.show(href);
     }
+    current = href;
     
     if (window.history && window.history.pushState) {
         var mismatched = window.location.pathname !== href;
-        
-        if (mismatched && href === '/articles') {
+        if (mismatched && href === '/') {
+            window.history.pushState(null, 'browserify', '/');
+        }
+        else if (mismatched && href === '/articles') {
             window.history.pushState(null, 'browserify articles', 'articles');
         }
         else if (mismatched) {
-            var article = articles.get(href) || {};
-            var title = article.doc && article.doc.title || '';
-            var name = article.name || '';
-            window.history.pushState(null, title, name);
+            articles.get(href, function (article) {
+                if (!article) return;
+                var title = article.doc && article.doc.title || '';
+                var name = article.name || '/';
+                window.history.pushState(null, title, name);
+            });
         }
     }
-    else {
-        window.location.hash = '#!' + href;
+    else if (window.location.hash !== '#!' + href) {
+        if (window.location.pathname !== '/') {
+            window.location.href = '/#!' + href;
+        }
+        else {
+            window.location.hash = '#!' + href;
+        }
     }
 }
-showPage(/^#!/.test(window.location.hash)
-    ? window.location.hash
-    : window.location.pathname
-);
+
+window.addEventListener('hashchange', function () {
+    var href = window.location.hash.replace(/^#!\/?/, '/');
+    if (current !== href && /^#!/.test(window.location.hash)) {
+        showPage(href);
+    }
+});
+
+window.addEventListener('popstate', popstate);
+function popstate () {
+    var href = /^#!/.test(window.location.hash)
+        ? window.location.hash.replace(/^#!/, '/')
+        : window.location.pathname
+    ;
+    showPage(href);
+}
+
+if (window.history && window.history.pushState
+&& /^#!/.test(window.location.hash)) {
+}
+else popstate();
 
 function hide (e) { e.style.display = 'none' }
 function show (e) { e.style.display = 'block' }

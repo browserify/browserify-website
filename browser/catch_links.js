@@ -1,9 +1,10 @@
 module.exports = function (root, cb) {
     var links = root.querySelectorAll('a[href]');
     for (var i = 0; i < links.length; i++) {
-        var href = links[i].getAttribute('href');
-        if (/^\/[^.\/]+$/.test(href)) {
-            links[i].addEventListener('click', onclick(href));
+        var link = links[i];
+        var href = link.getAttribute('href');
+        if (/^\/[^.\/]+$/.test(href) || link.host === window.location.host) {
+            link.addEventListener('click', onclick(href));
         }
     }
     
