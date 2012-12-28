@@ -5,11 +5,14 @@ var divs = {
     splash : document.querySelector('#splash'),
     articles : document.querySelector('#articles'),
     articleBox : document.querySelector('#article-box'),
-    previews : document.querySelector('#previews')
+    previews : document.querySelector('#previews'),
+    previewBox : document.querySelector('#preview-box'),
+    search : document.querySelector('#search')
 };
 
 var articles = require('./article')(divs.articles);
 var previews = require('./preview')(divs.previews);
+var search = require('./search')(divs.search);
 
 http.get({ path : '/blog.json?inline=html' }, function (res) {
     var parser = JSONStream.parse([ true ]);
@@ -29,12 +32,20 @@ cloneCode.textContent = cloneCode.textContent
 
 var singlePage = require('single-page');
 var showPage = singlePage(function (href) {
+    hide(divs.articleBox);
+    hide(divs.search);
+    hide(divs.splash);
+    show(divs.previewBox);
+    
     if (href === '/') {
         show(divs.splash);
-        hide(divs.articleBox);
+    }
+    else if (href === '/search') {
+        hide(divs.previewBox);
+        show(divs.search);
+        search.focus();
     }
     else {
-        hide(divs.splash);
         show(divs.articleBox);
         articles.show(href);
     }

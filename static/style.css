@@ -53,6 +53,36 @@ body {
     color: rgb(230,182,91);
 }
 
+#search form {
+    border-color: rgb(90,140,230);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    
+    background-color: rgb(60,105,145);
+    
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 2em;
+    
+    padding: 5px;
+}
+
+#search form input.query {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#search .browse {
+    display: none;
+}
+
+#search .results {
+}
+
 #splash {
     color: rgb(200,220,235);
 }
