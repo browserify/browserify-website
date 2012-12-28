@@ -53,6 +53,13 @@ body {
     color: rgb(230,182,91);
 }
 
+#search h1 {
+    max-width: 750px;
+    margin: auto;
+    margin-top: -25px;
+    color: rgb(90,140,230);
+}
+
 #search form {
     border-color: rgb(90,140,230);
     border-style: solid;
@@ -64,8 +71,6 @@ body {
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 2em;
     
     padding: 5px;
 }
@@ -74,6 +79,7 @@ body {
     width: 100%;
     border-radius: 5px;
     padding: 5px;
+    border-width: 0px;
 }
 
 #search .browse {
