@@ -92,13 +92,20 @@ body {
     margin: auto;
     margin-bottom: 5px;
     
-    border-color: rgb(60,105,145);
-    border-style: solid;
-    border-width: 2px;
     border-radius: 5px;
     
     color: rgb(200,220,235);
     background-color: rgb(20,30,49);
+}
+
+#search .featured .result {
+    color: rgb(109,75,45);
+    background-color: rgb(230,182,91);
+}
+
+#search .featured .result a:link,
+#search .featured .result a:visited {
+    color: rgb(20,40,65);
 }
 
 #search .testling .result {
@@ -106,7 +113,6 @@ body {
     border-color: rgb(90,140,230);
     background-color: rgb(35, 59, 109);
 }
-
 
 #search .result a:link,
 #search .result a:visited {

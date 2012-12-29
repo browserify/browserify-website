@@ -15,6 +15,7 @@ function Search (target) {
         form: target.querySelector('form'),
         query: target.querySelector('.query'),
         results: target.querySelector('.results'),
+        featured: target.querySelector('.results .featured'),
         testling: target.querySelector('.results .testling'),
         npm: target.querySelector('.results .npm')
     };
@@ -54,8 +55,8 @@ function Search (target) {
             },
             '.description' : pkg.description
         });
-        if (Math.random() * 5 <= 1) {
-            elements.testling.appendChild(div);
+        var hasBadge = Math.random() * 5 <= 1;
+        if (hasBadge) {
             hyperglue(div, {
                 '.badge img' : {
                     src : 'http://ci.testling.com/substack/ever.png'
@@ -64,6 +65,13 @@ function Search (target) {
                     href : 'http://ci.testling.com/substack/ever'
                 }
             });
+        }
+        
+        if (hasBadge && Math.random() * 3 <= 1) {
+            elements.featured.appendChild(div);
+        }
+        else if (hasBadge) {
+            elements.testling.appendChild(div);
         }
         else {
             elements.npm.appendChild(div);
