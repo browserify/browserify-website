@@ -86,7 +86,51 @@ body {
     display: none;
 }
 
-#search .results {
+#search .result {
+    padding: 10px;
+    max-width: 750px;
+    margin: auto;
+    margin-bottom: 5px;
+    
+    border-color: rgb(60,105,145);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    
+    color: rgb(200,220,235);
+    background-color: rgb(20,30,49);
+}
+
+#search .testling .result {
+    color: rgb(200,220,235);
+    background-color: rgb(35, 59, 109);
+}
+
+
+#search .result a:link,
+#search .result a:visited {
+    color: rgb(230,182,91);
+    text-decoration: none;
+}
+
+#search .result a:hover {
+    text-decoration: underline;
+}
+
+#search .result .left {
+    display: inline-block;
+    width: 478px;
+    vertical-align: top;
+}
+
+#search .result .badge {
+    display: inline-block;
+    width: 262px;
+    vertical-align: top;
+}
+
+#search .npm .badge {
+    display: none;
 }
 
 #splash {
