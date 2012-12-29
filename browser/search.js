@@ -65,15 +65,20 @@ function Search (target) {
                     href : 'http://ci.testling.com/substack/ever'
                 }
             });
+            show(div.querySelector('.github'));
         }
         
         if (hasBadge && Math.random() * 3 <= 1) {
             elements.featured.appendChild(div);
+            show(div.querySelector('.featured'));
         }
         else if (hasBadge) {
             elements.testling.appendChild(div);
         }
         else {
+            if (Math.random() > 0.5) {
+                show(div.querySelector('.github'));
+            }
             elements.npm.appendChild(div);
         }
     }

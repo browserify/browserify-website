@@ -124,6 +124,22 @@ body {
     text-decoration: underline;
 }
 
+#search .result .icons {
+    display: inline-block;
+    width: 23px;
+    margin-left: -38px;
+    margin-right: 15px;
+}
+
+#search .result .icons img {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#search .result .icons img.npm {
+    display: inline;
+}
+
 #search .result .left {
     display: inline-block;
     width: 478px;

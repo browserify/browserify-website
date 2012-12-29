@@ -1,5 +1,10 @@
 module.exports = [
   '<div class="result">',
+    '<div class="icons">',
+      '<img class="featured" src="/images/star.png">',
+      '<img class="npm" src="/images/npm.png">',
+      '<img class="github" src="/images/octocat.png">',
+    '</div>',
     '<div class="left">',
       '<div class="name">',
         '<a></a>',
