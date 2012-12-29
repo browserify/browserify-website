@@ -87,18 +87,22 @@ body {
 }
 
 #search .result {
-    padding: 10px;
     max-width: 750px;
     margin: auto;
     margin-bottom: 5px;
-    
+}
+
+#search .result .inner {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
     border-radius: 5px;
     
     color: rgb(200,220,235);
     background-color: rgb(20,30,49);
 }
 
-#search .featured .result {
+#search .featured .result .inner {
     color: rgb(109,75,45);
     background-color: rgb(230,182,91);
 }
@@ -108,10 +112,14 @@ body {
     color: rgb(20,40,65);
 }
 
-#search .testling .result {
+#search .testling .result .inner {
     color: rgb(200,220,235);
     border-color: rgb(90,140,230);
     background-color: rgb(35, 59, 109);
+}
+
+#search .npm .result .inner {
+    vertical-align: top;
 }
 
 #search .result a:link,
@@ -126,11 +134,11 @@ body {
 
 #search .result .icons {
     display: inline-block;
-    width: 69px;
+    width: 75px;
     margin-left: -84px;
-    margin-right: 15px;
-    margin-top: 4px;
-    vertical-align: top;
+    margin-right: 5px;
+    margin-top: 10px;
+    vertical-align: middle;
     text-align: right;
 }
 
@@ -144,9 +152,9 @@ body {
     display: inline;
 }
 
-#search .result .left {
+#search .result .middle {
     display: inline-block;
-    width: 478px;
+    width: 458px;
     vertical-align: top;
 }
 
@@ -160,8 +168,7 @@ body {
     border-width: 0px;
 }
 
-#search .npm .badge {
-    display: none;
+#search .npm .badge a {
 }
 
 #splash {
