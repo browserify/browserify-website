@@ -25,6 +25,7 @@ function Search (target) {
         
         elements.testling.innerHTML = '';
         elements.npm.innerHTML = '';
+        elements.featured.innerHTML = '';
         show(elements.results);
         
         var q = encodeURIComponent(elements.query.value);
