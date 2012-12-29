@@ -103,6 +103,7 @@ body {
 
 #search .testling .result {
     color: rgb(200,220,235);
+    border-color: rgb(90,140,230);
     background-color: rgb(35, 59, 109);
 }
 
@@ -326,7 +327,7 @@ body {
     border-width: 2px;
     border-radius: 5px;
     
-    background-color: rgb(60,105,145);
+    background-color: rgb(35, 59, 109);
     width: 400px;
     
     color: rgb(200,220,235);
