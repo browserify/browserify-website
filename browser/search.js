@@ -57,7 +57,12 @@ function Search (target) {
         if (Math.random() * 5 <= 1) {
             elements.testling.appendChild(div);
             hyperglue(div, {
-                '.badge img' : { src : 'http://ci.testling.com/substack/ever.png' }
+                '.badge img' : {
+                    src : 'http://ci.testling.com/substack/ever.png'
+                },
+                '.badge a' : {
+                    href : 'http://ci.testling.com/substack/ever'
+                }
             });
         }
         else {

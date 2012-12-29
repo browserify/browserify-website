@@ -7,6 +7,8 @@ module.exports = [
       '<div class="description"></div>',
       '<div class="keywords"></div>',
     '</div>',
-    '<div class="badge"><img></div>',
+    '<div class="badge">',
+      '<a><img></a>',
+    '</div>',
   '</div>'
 ].join('\n');

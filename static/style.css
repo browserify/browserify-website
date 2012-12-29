@@ -129,6 +129,10 @@ body {
     vertical-align: top;
 }
 
+#search .result .badge img {
+    border-width: 0px;
+}
+
 #search .npm .badge {
     display: none;
 }
