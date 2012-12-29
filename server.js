@@ -18,6 +18,9 @@ var server = http.createServer(function (req, res) {
             }
             else {
                 res.setHeader('content-type', 'application/json');
+                if (params.limit || params.offset) {
+                    results = results.slice(params.offset, params.limit);
+                }
                 res.end(JSON.stringify(results));
             }
         });
