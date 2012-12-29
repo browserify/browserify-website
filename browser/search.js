@@ -92,4 +92,8 @@ Search.prototype.focus = function () {
 };
 
 function hide (e) { e.style.display = 'none' }
-function show (e) { e.style.display = 'block' }
+function show (e) {
+    e.style.display = e.tagName === 'div'
+        ? 'block' : 'inline'
+    ;
+}

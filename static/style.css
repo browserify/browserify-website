@@ -126,14 +126,18 @@ body {
 
 #search .result .icons {
     display: inline-block;
-    width: 23px;
-    margin-left: -38px;
+    width: 69px;
+    margin-left: -84px;
     margin-right: 15px;
+    margin-top: 4px;
+    vertical-align: top;
+    text-align: right;
 }
 
 #search .result .icons img {
     display: none;
     margin-bottom: 10px;
+    vertical-align: top;
 }
 
 #search .result .icons img.npm {
