@@ -13,6 +13,7 @@
     "single-page" : "~0.0.0",
     "catch-links" : "~0.0.0",
     "npm-package-search" : "~0.0.0",
+    "github-from-package" : "~0.0.0",
     "mkdirp" : "~0.3.4"
   },
   "devDependencies" : {
