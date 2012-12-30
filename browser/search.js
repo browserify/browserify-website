@@ -63,10 +63,10 @@ function Search (target) {
         if (pkg.testling) {
             hyperglue(div, {
                 '.badge img' : {
-                    src : 'http://ci.testling.com/substack/ever.png'
+                    src : 'http://ci.testling.com/' + pkg.testling + '.png'
                 },
                 '.badge a' : {
-                    href : 'http://ci.testling.com/substack/ever'
+                    href : 'http://ci.testling.com/' + pkg.testling
                 }
             });
         }
