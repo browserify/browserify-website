@@ -12,7 +12,8 @@
     "hyperglue" : "~0.0.0",
     "single-page" : "~0.0.0",
     "catch-links" : "~0.0.0",
-    "quotemeta" : "~0.0.0"
+    "npm-package-search" : "~0.0.0",
+    "mkdirp" : "~0.3.4"
   },
   "devDependencies" : {
     "browserify" : "~1.16.6"
