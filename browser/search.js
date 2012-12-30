@@ -59,8 +59,8 @@ function Search (target) {
             '.npm' : { href : 'https://npmjs.org/package/' + pkg.name },
             '.featured' : pkg.article ? { href : pkg.article } : {},
         });
-        var hasBadge = Math.random() * 5 <= 1;
-        if (hasBadge) {
+        
+        if (pkg.testling) {
             hyperglue(div, {
                 '.badge img' : {
                     src : 'http://ci.testling.com/substack/ever.png'
@@ -74,10 +74,13 @@ function Search (target) {
             show(div.querySelector('.github img'));
         }
         if (pkg.article) {
-            elements.featured.appendChild(div);
             show(div.querySelector('.featured img'));
         }
-        else if (hasBadge) {
+        
+        if (pkg.article) {
+            elements.featured.appendChild(div);
+        }
+        else if (pkg.testling) {
             elements.testling.appendChild(div);
         }
         else {
