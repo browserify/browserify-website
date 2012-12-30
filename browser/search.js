@@ -54,7 +54,10 @@ function Search (target) {
               href : 'https://npmjs.org/package/' + pkg.name,
               _text : pkg.name,
             },
-            '.description' : pkg.description
+            '.description' : pkg.description,
+            '.github' : pkg.github ? { href : pkg.github } : {},
+            '.npm' : { href : 'https://npmjs.org/package/' + pkg.name },
+            '.featured' : pkg.article ? { href : pkg.article } : {},
         });
         var hasBadge = Math.random() * 5 <= 1;
         if (hasBadge) {
@@ -66,20 +69,18 @@ function Search (target) {
                     href : 'http://ci.testling.com/substack/ever'
                 }
             });
-            show(div.querySelector('.github'));
         }
-        
-        if (hasBadge && Math.random() * 3 <= 1) {
+        if (pkg.github) {
+            show(div.querySelector('.github img'));
+        }
+        if (pkg.article) {
             elements.featured.appendChild(div);
-            show(div.querySelector('.featured'));
+            show(div.querySelector('.featured img'));
         }
         else if (hasBadge) {
             elements.testling.appendChild(div);
         }
         else {
-            if (Math.random() > 0.5) {
-                show(div.querySelector('.github'));
-            }
             elements.npm.appendChild(div);
         }
     }

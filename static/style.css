@@ -144,11 +144,24 @@ body {
 
 #search .result .icons img {
     display: none;
+    border-width: 0px;
     margin-bottom: 10px;
     vertical-align: top;
 }
 
-#search .result .icons img.npm {
+#search .result .icons a:hover {
+    text-decoration: none;
+}
+
+#search .result .icons a:hover img {
+    background-color: rgb(90,140,230);
+    box-shadow: 0px 0px 10px rgb(90,140,230);
+    border-radius: 3px;
+    padding: 2px;
+    margin: -2px;
+}
+
+#search .result .icons .npm img {
     display: inline;
 }
 
