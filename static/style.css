@@ -301,12 +301,19 @@ body {
 
 .article.summary .fade {
     display: block;
-    background-color: red;
     height: 100px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
-    right: 0px;
+    left: 5px;
+    right: 5px;
+    
+    /* chrome and safari */
+    background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,1.0), rgba(255,255,255,0));
+    /* ff 3.6 - 15 */
+    background-image: -moz-linear-gradient(bottom, rgba(255,255,255,1.0), rgba(255,255,255,0));
+    
+    /* standard */
+    background-image: linear-gradient(to top, rgba(255,255,255,1.0), rgba(255,255,255,0));
 }
 
 .article .title {
