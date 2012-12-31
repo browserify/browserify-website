@@ -19,6 +19,7 @@ module.exports = [
         '</div>',
       '</div>',
       '<div class="body"></div>',
+      '<div class="fade"></div>',
     '</div>',
   '</div>'
 ].join('\n')

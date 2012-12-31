@@ -30,9 +30,13 @@ Article.prototype.push = function (doc) {
         '.date' : doc.date,
         '.body' : { _html : doc.body }
     });
-    div.style.display = name === self.name || self.name === 'articles'
-        ? 'block' : 'none'
-    ;
+    if (self.name === 'articles') {
+        div.style.display = 'block';
+        div.className = 'article summary';
+    }
+    else {
+        div.style.display = name === self.name ? 'block' : 'none';
+    }
     catchLinks(div, function (href) {
         self.emit('link', href);
     });
@@ -47,8 +51,14 @@ Article.prototype.show = function (href) {
     
     for (var i = 0; i < this.articles.length; i++) {
         var article = this.articles[i];
-        var display = name === 'articles' || name === article.name
-            ? 'block' : 'none';
-        article.element.style.display = display;
+        if (name === 'articles') {
+            article.element.style.display = 'block';
+            article.element.className = 'article summary';
+        }
+        else {
+            var d = name === article.name ? 'block' : 'none';
+            article.element.style.display = d;
+            article.element.className = 'article';
+        }
     }
 };

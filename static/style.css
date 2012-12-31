@@ -289,6 +289,26 @@ body {
     padding: 5px;
 }
 
+.article.summary {
+    max-height: 300px;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.article .fade {
+    display: none;
+}
+
+.article.summary .fade {
+    display: block;
+    background-color: red;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
 .article .title {
     font-size: 24px;
     padding-bottom: 5px;
