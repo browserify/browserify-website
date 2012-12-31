@@ -14,15 +14,13 @@ var server = http.createServer(function (req, res) {
         search(params.query, function (err, results) {
             if (err) {
                 res.statusCode = 400;
-                res.end(err);
+                return res.end(err);
             }
-            else {
-                res.setHeader('content-type', 'application/json');
-                if (params.limit || params.offset) {
-                    results = results.slice(params.offset, params.limit);
-                }
-                res.end(JSON.stringify(results));
+            res.setHeader('content-type', 'application/json');
+            if (params.limit || params.offset) {
+                results = results.slice(params.offset, params.limit);
             }
+            res.end(JSON.stringify(results));
         });
         return;
     }
