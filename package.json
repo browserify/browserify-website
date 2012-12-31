@@ -8,7 +8,7 @@
   "dependencies" : {
     "JSONStream" : "~0.4.3",
     "ecstatic" : "~0.3.0",
-    "glog" : "~0.0.0",
+    "glog" : "~0.0.2",
     "hyperglue" : "~0.0.0",
     "single-page" : "~0.0.0",
     "catch-links" : "~0.0.0",

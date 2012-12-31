@@ -64,5 +64,5 @@ Preview.prototype.show = function (ix) {
     if (prev) prev.className = 'preview';
      
     var div = this.target.childNodes[ix++ % this.length];
-    div.className = 'preview active';
+    if (div) div.className = 'preview active';
 };
