@@ -70,6 +70,8 @@ function Search (target) {
                 }
             });
         }
+        else hide(div.querySelector('.badge img'))
+        
         if (pkg.github) {
             show(div.querySelector('.github img'));
         }
