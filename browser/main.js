@@ -31,7 +31,7 @@ cloneCode.textContent = cloneCode.textContent
 ;
 
 var singlePage = require('single-page');
-var showPage = singlePage(function (href) {
+var showPage = singlePage(function (href, page) {
     hide(divs.articleBox);
     hide(divs.search);
     hide(divs.splash);
@@ -49,7 +49,9 @@ var showPage = singlePage(function (href) {
         show(divs.articleBox);
         articles.show(href);
     }
-    window.scrollTo(0);
+    process.nextTick(function () {
+        window.scrollTo(page.scrollX, page.scrollY);
+    });
     
     function hide (e) { e.style.display = 'none' }
     function show (e) { e.style.display = 'block' }
