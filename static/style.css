@@ -290,8 +290,11 @@ body {
 }
 
 .article.summary {
-    max-height: 300px;
     position: relative;
+}
+
+.article.summary .inner {
+    max-height: 300px;
     overflow-y: hidden;
 }
 
@@ -303,7 +306,7 @@ body {
     display: block;
     height: 100px;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     left: 5px;
     right: 5px;
     
