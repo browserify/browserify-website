@@ -53,6 +53,10 @@ body {
     color: rgb(230,182,91);
 }
 
+#search {
+    display: none;
+}
+
 #search .box {
     max-width: 694px;
     margin: auto;
