@@ -3,7 +3,8 @@
   "version" : "0.0.0",
   "scripts" : {
     "start" : "node server.js 5000 /tmp/repo",
-    "build-dev" : "browserify browser/main.js -o static/bundle.js --watch --debug --verbose"
+    "build-dev" : "browserify browser/main.js -o static/bundle.js --watch --debug --verbose",
+    "build" : "browserify browser/main.js -o static/bundle.js"
   },
   "dependencies" : {
     "JSONStream" : "~0.4.3",
