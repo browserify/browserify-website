@@ -5,8 +5,8 @@
     "start": {
       "browserify.org": "node server.js"
     },
-    "build-dev" : "browserify browser/main.js -o static/bundle.js --watch --debug --verbose",
-    "build" : "browserify browser/main.js -o static/bundle.js"
+    "postinstall": "browserify browser/main.js -o static/bundle.js",
+    "build-dev" : "browserify browser/main.js -o static/bundle.js --watch --debug --verbose"
   },
   "dependencies" : {
     "JSONStream" : "~0.4.3",
