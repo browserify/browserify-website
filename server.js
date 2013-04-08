@@ -1,5 +1,5 @@
 var http = require('http');
-var glog = require('glog')(__dirname + '/data');
+var glog = require('glog')(process.env.HOME + '/data/browserify-website');
 var ecstatic = require('ecstatic')(__dirname + '/static');
 
 var search = require('./lib/search');
