@@ -196,6 +196,7 @@ body {
     max-width: 600px;
     color: rgb(140,190,230);
     margin: auto;
+    margin-top: 10px;
 }
 
 .filename {
