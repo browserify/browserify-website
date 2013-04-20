@@ -11,10 +11,10 @@
   "dependencies" : {
     "JSONStream" : "~0.6.4",
     "ecstatic" : "~0.4.2",
-    "glog" : "~0.2.5",
+    "glog" : "~1.0.0",
     "hyperglue" : "~0.0.0",
-    "single-page" : "~0.1.1",
-    "catch-links" : "~0.0.0",
+    "single-page" : "~0.2.3",
+    "catch-links" : "~0.0.1",
     "npm-package-search" : "~0.1.0",
     "github-from-package" : "~0.0.0",
     "mkdirp" : "~0.3.4",

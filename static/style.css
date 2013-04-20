@@ -199,6 +199,17 @@ body {
     margin-top: 10px;
 }
 
+#splash h1 a:link,
+#splash h1 a:visited {
+    text-decoration: none;
+    color: rgb(140,190,230);
+}
+
+#splash h1 a:hover {
+    color: rgb(160,210,240);
+    text-decoration: underline;
+}
+
 .filename {
     width: 580px;
     margin: auto;
