@@ -1,5 +1,5 @@
 var http = require('http');
-var glog = require('glog')(process.argv[3]);
+var glog = require('glog')(process.env.HOME + '/data/browserify-website');
 var ecstatic = require('ecstatic')(__dirname + '/static');
 
 var search = require('./lib/search');
@@ -30,4 +30,4 @@ var server = http.createServer(function (req, res) {
     }
     ecstatic(req, res);
 });
-server.listen(Number(process.argv[2]));
+server.listen(Number(process.env.PORT));
