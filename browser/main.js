@@ -25,11 +25,6 @@ http.get({ path : '/blog.json?inline=html' }, function (res) {
     res.pipe(parser);
 });
 
-var cloneCode = document.querySelector('#clone .code');
-cloneCode.textContent = cloneCode.textContent
-    .replace(/\$REMOTE/, 'http://' + window.location.host + '/blog.git')
-;
-
 var singlePage = require('single-page');
 var showPage = singlePage(function (href, page) {
     hide(divs.articleBox);

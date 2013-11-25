@@ -188,7 +188,7 @@ body {
 #search .npm .badge a {
 }
 
-#splash {
+#splash, #article-box {
     color: rgb(200,220,235);
 }
 
@@ -248,20 +248,20 @@ body {
     color: rgb(230,182,91);
 }
 
-#splash .step {
+#splash .step, #article-box {
     max-width: 600px;
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-#splash .step a:link,
-#splash .step a:visited {
+#splash .step a:link, #article-box a:link,
+#splash .step a:visited, #article-box a:visited {
     color: rgb(90,140,230);
     text-decoration: none;
 }
 
-#splash .step a:hover {
+#splash .step a:hover, #article-box a:hover {
     color: rgb(230,182,91);
 }
 
