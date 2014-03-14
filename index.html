@@ -1,0 +1,138 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browserify</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"title="no title" charset="utf-8">
+  </head>
+  <body class="style-a">
+    <section id="top-home-section" class="top-section color-a">
+      <center>
+        <div id="top-home-image"></div>
+         <h1 id="top-title">Browserify</h1>
+         <h3 id="top-subtitle" class="large-font">Browserify lets you require('modules') in the browser by bundling up all of your dependencies.</h3>
+        <button class="top-button" id="top-button1">
+          <a href="">Install</a>
+        </button>
+        <button class="top-button" id="top-button2">
+          <a href="https://github.com/substack/node-browserify">Source</a>
+        </button>
+      </center>
+    </section>
+    <section id="middle-section" class="middle-section color-b" >
+      <header data-gss-id="13">
+         <h1 style="font-size: 65px; margin-bottom: 15px;"><a name="rel_pos_size">Use Modules In The Browser</a></h1>
+         <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">Write your browser code with node.js-style requires</h2>
+      </header>
+      <div class="content" style="box-sizing: border-box; font-size: 20px; line-height: 30px; width: 720px; margin: 0 auto;">
+        <div class="step">
+          Write your browser code with <a href="http://nodejs.org/docs/latest/api/modules.html#modules_modules">node.js-style</a> <span class="require">requires</span>:
+        </div>
+       
+        <div class="filename">main.js</div>
+<pre class="code">var foo = <span class="require">require(<span class="string">'./foo'</span>)</span>;
+var gamma = <span class="require">require(<span class="string">'gamma'</span>)</span>;
+
+var n = gamma(foo(5) * 3);
+var txt = document.createTextNode(n);
+document.body.appendChild(txt);</pre>
+    
+        <div class="step">
+          Export functionality by assigning onto <span class="gold">module.exports</span> or <span class="gold">exports</span>:
+        </div>
+      
+        <div class="filename">foo.js</div>
+        <pre class="code">module.exports = function (n) { return n * 11 }</pre>
+      
+        <div class="step">
+          Install modules with <a href="https://npmjs.org">npm</a>:
+        </div>
+       
+        <pre class="code"><span class="blue">npm</span> install <span class="gold">gamma</span></pre>
+
+        <div class="step">
+          Now recursively bundle up all the required modules starting at <span class="gold">main.js</span> into a single file with the <span class="gold">browserify</span> command:
+        </div>
+      
+        <pre class="code"><span class="blue">browserify</span> <span class="gold">main.js</span> -o <span class="gold">bundle.js</span></pre>
+      
+        <div class="step">
+          Browserify parses the <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> for <span class="gold">require()</span> calls to traverse the entire dependency graph of your project.
+        </div>
+      
+        <div class="step">
+          Drop a single <span class="gold">&lt;script&gt;</span> tag into your html and you're done!
+        </div>
+      
+        <pre class="code"><span class="blue">&lt;script</span> src="<span class="gold">bundle.js</span>"<span class="blue">&gt;&lt;/script&gt;</span></pre>
+      
+        <h1 style="font-size: 65px; margin-bottom: 15px;"><a name="more" href="#more">More</a></h1>
+      
+        <div class="step">
+          <ul>
+            <li>
+              use npm modules in the browser
+            </li>
+            <li>
+              <span class="gold">process.nextTick()</span>,
+              <span class="gold">__dirname</span>,
+              and <span class="gold">__filename</span>
+              node-isms work
+            </li>
+            <li>
+              get browser versions of the node core libraries
+              <a href="http://nodejs.org/docs/latest/api/events.html">events</a>,
+              <a href="http://nodejs.org/docs/latest/api/stream.html">stream</a>,
+              <a href="http://nodejs.org/docs/latest/api/path.html">path</a>,
+              <a href="http://nodejs.org/docs/latest/api/url.html">url</a>,
+              <a href="http://nodejs.org/docs/latest/api/assert.html">assert</a>,
+              <a href="https://github.com/toots/buffer-browserify">buffer</a>,
+              <a href="http://nodejs.org/docs/latest/api/util.html">util</a>,
+              <a href="http://nodejs.org/docs/latest/api/querystring.html">querystring</a>,
+              <a href="https://github.com/substack/http-browserify">http</a>,
+              <a href="https://github.com/substack/vm-browserify">vm</a>,
+              and
+              <a href="https://github.com/dominictarr/crypto-browserify">crypto</a>
+              when you <span class="gold">require()</span> them
+            </li>
+            <li>
+              Test your modules in all the browsers with
+              <a href="http://ci.testling.com/">testling-ci</a>.
+              Many modules known to work with browserify will have a
+              <a href="http://ci.testling.com/">testling-ci</a> badge:
+              <div class="badge">
+                <a href="http://ci.testling.com"
+                ><img src="/images/testling_badge.png"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      
+        <h1 style="font-size: 65px; margin-bottom: 15px;"><a name="community" href="#community">Community</a></h1>
+      
+        <div class="step">
+          Join irc.freenode.net/#browserify for help.
+        </div>
+      </div>
+    </section>
+    <section id="bottom-section" class="bottom-section color-c">
+      <header data-gss-id="13">
+         <h1 data-gss-id="20" style="box-sizing: border-box; font-size: 65px; margin-bottom: 15px;"><a name="rel_pos_size">Install</a></h1>
+
+         <h2 class="subtitle" data-gss-id="16" style="box-sizing: border-box; font-size: 18px; margin-bottom: 30px;">use Browserify from the Command Line</h2>
+      </header>
+      <div class="content" style="box-sizing: border-box; font-size: 20px; line-height: 30px; width: 720px; margin: 0 auto;">
+
+        <div class="step">
+          First install <a href="http://nodejs.org/">node</a>,
+          which ships with <a href="https://npmjs.org">npm</a>.
+          Then do:
+        </div>
+      
+        <pre class="code"><span class="blue">npm</span> install -g <span class="gold">browserify</span></pre>
+      </div>
+    </section>
+    
+  </body>
+</html>
