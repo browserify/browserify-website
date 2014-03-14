@@ -1,0 +1,192 @@
+@font-face {
+  font-family:'Adelle';
+  src:url('fonts/adelle.eot') format('embedded-opentype'),
+    url('fonts/adelle.woff') format('woff'),
+    url('fonts/adelle.ttf') format('truetype'),
+    url('fonts/adelle.svg') format('svg')
+}
+
+*, *:after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+pre {
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #F2F4FF;
+  padding: 1em 1em 1em 1em;
+  border-left: solid 3px #B28300;
+  margin-right: -1em;
+  overflow-x: auto;
+}
+
+.string {
+  color: #B28300;
+}
+
+.gold {
+  background-color: #F2F4FF;
+  padding: .2em;
+  font-size: 18px;
+  margin: none;
+  color: #B28300;
+  font-family: monospace;
+}
+
+section {
+  padding: 0 0 100px 0;
+}
+
+.filename {
+  text-align: right;
+  font-size: 14px;
+  margin: auto;
+  margin-bottom: -4px;
+  margin-top: -15px;
+}
+
+#middle-section, #bottom-section { padding: 100px 0; }
+#middle-section h1 { padding: 50px 0 40px 0; }
+#bottom-section .code { color: black; }
+
+body {
+  text-decoration: none;
+  font-family: "Adelle",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+em {
+  font-family: "Adelle",sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+header, h1 {
+  text-align: center;
+  font-family: "Adelle", georgia,serif;
+  font-style: normal;
+  font-weight: 400;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: normal;
+}
+h2 {
+  font-family: "Adelle", georgia,serif;
+  font-weight: 400;
+}
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: .16em;  
+}
+.content h2 {
+  font-style: normal;
+  text-align: center;
+}
+
+div, p, blockquote, button {
+  margin: 0;
+}
+
+blockquote {
+  font-family: "Adelle", georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+ul, ol, li { 
+  margin: 14px 0;
+}
+
+small {
+  font-size: .6em;
+}
+
+button {
+  outline: none;
+  box-shadow: none;
+  padding: .2em .5em .2em .6em;
+  background: none;
+  border: 5px solid;
+  font-family: "Adelle", georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.trans {
+  -webkit-transition: -webkit-transform .3s;
+     -moz-transition:    -moz-transform .3s;
+          transition:         transform .3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;  
+}
+
+p a {
+  font-weight: inherit;
+}
+
+/* Color Schemes
+============================================================= */
+
+button {
+  color: #B28300;
+  background-color: #F2F4FF;
+  margin-right: 10px;
+}
+
+button.transparent {
+  background-color: transparent;
+}
+
+button:hover, button.transparent:hover {
+  border-color: #B28300;
+  background-color: #B28300 !important;
+  color: #F2F4FF;
+}
+
+.badge g {
+  fill: #6f019e;
+}
+
+.color-a {
+  background-color: #F2F4FF;
+  color: #B28300;
+} 
+
+.color-a #top-home-image {
+  background-image:      
+    url('images/wizard-hat.png');
+  background-position: 
+    center center;
+  background-repeat: 
+    no-repeat;
+  background-size: 
+    contain;
+}
+
+.color-c {
+  background-color: #B28300;
+  color: #F2F4FF;
+} 
+
+#top-home-section { overflow: auto; }
+#top-home-image { width: 348px; height: 400px; }
+#top-title { padding-bottom: 30px; font-size: 84.5px; }
+#top-subtitle { font-size: 24px; line-height: 36px; width: 720px; padding-bottom: 30px; }
+.top-button { font-size: 26px; }
