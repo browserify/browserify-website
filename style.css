@@ -141,6 +141,31 @@ p a {
   font-weight: inherit;
 }
 
+.articles section { padding: 50px; }
+.articles #middle-section, .articles #bottom-section { padding: 50px 0; }
+
+
+.entry-content a { color: #B28300;}
+
+.entry-content h2 {
+  margin: 1em 0 15px;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.7;
+  cursor: text;
+  position: relative;
+  text-align: left;
+}
+
+.entry-content h3 {
+  margin: 1em 0 15px;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.7;
+  cursor: text;
+  position: relative;
+}
+
 /* Color Schemes
 ============================================================= */
 
