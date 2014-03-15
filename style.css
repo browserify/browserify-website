@@ -95,6 +95,19 @@ h2 {
   text-align: center;
 }
 
+.content p { 
+  margin: 40px 0;
+}
+
+.content iframe {
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+}
+
+.content hr {
+  margin-bottom: 40px;
+}
+
 div, p, blockquote, button {
   margin: 0;
 }
