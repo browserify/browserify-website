@@ -54,8 +54,10 @@ section {
   margin-top: -15px;
 }
 
-#middle-section, #bottom-section, .review-section { padding: 100px 0; }
-#middle-section h1 { padding: 50px 0 40px 0; }
+#bottom-section, .review-section { padding: 100px 0; }
+#middle-section { padding: 50px 0; }
+#middle-section h1 { padding: 50px 0 20px 0; }
+#middle-section h3 { padding: 30px 0; font-size: 45px; text-align: center; }
 #bottom-section .code { color: black; }
 
 body {
@@ -121,7 +123,7 @@ blockquote {
   font-size: 1.2em;
   line-height: 1.6em;
   padding: 36px;
-  border: solid 8px hsl(58, 100%, 84%);
+  border: solid 8px #e6b35a;
   font-style: italic;
 }
 
@@ -207,6 +209,8 @@ button:hover, button.transparent:hover {
 .badge g {
   fill: #6f019e;
 }
+
+.color-d { color: #e6b35a; }
 
 .color-a {
   background-color: #F2F4FF;
