@@ -11,7 +11,7 @@
       <center>
         <div id="top-home-image"></div>
          <h1 id="top-title">Browserify</h1>
-         <h3 id="top-subtitle" class="large-font">Browserify lets you require('modules') in the browser by bundling up all of your dependencies.</h3>
+         <h3 id="top-subtitle" class="large-font">Browserify lets you require(<span class="color-d">'modules'</span>) in the browser by bundling up all of your dependencies.</h3>
         <button class="top-button" id="top-button1">
           <a href="#install">Install</a>
         </button>
@@ -32,33 +32,23 @@
          <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">Write your browser code with node.js-style requires</h2>
       </header>
       <div class="content" style="box-sizing: border-box; font-size: 20px; line-height: 30px; width: 720px; margin: 0 auto;">
-        <div class="step">
-          Write your browser code with <a href="http://nodejs.org/docs/latest/api/modules.html#modules_modules">node.js-style</a> <span class="require">requires</span>
-        </div>
-        
+        <p>Browsers don't have the <span class="gold">require</span> method defined, but Node.js does. With Browserify you can write code that uses <span class="gold">require</span> in the same way that you would use it in Node.</p>
+        <p>Here is a tutorial on how to use Browserify on the command line to bundle up a simple file called <span class="gold">main.js</span> along with all of it's dependencies:</p>
         <div class="filename">main.js</div>
-<pre class="code">var foo = <span class="require">require(<span class="string">'./foo'</span>)</span>;
-var gamma = <span class="require">require(<span class="string">'gamma'</span>)</span>;
+<pre class="code">var unique = <span class="require">require(<span class="string">'uniq'</span>)</span>;
 
-var n = gamma(foo(5) * 3);
-var txt = document.createTextNode(n);
-document.body.appendChild(txt);</pre>
-    
+var data = <span class="string">[</span>1, 2, 2, 3, 4, 5, 5, 5, 6<span class="string">]</span>
+
+console.log(uniq(data))
+</pre>
         <div class="step">
-          Export functionality by assigning onto <span class="gold">module.exports</span> or <span class="gold">exports</span>:
-        </div>
-      
-        <div class="filename">foo.js</div>
-        <pre class="code">module.exports = function (n) { return n * 11 }</pre>
-      
-        <div class="step">
-          Install modules with <a href="https://npmjs.org">npm</a>:
+          Install the <span class="gold">uniq</span> module with <a href="https://npmjs.org">npm</a>:
         </div>
        
-        <pre class="code"><span class="blue">npm</span> install <span class="gold">gamma</span></pre>
+        <pre class="code"><span class="blue">npm</span> install uniq</pre>
 
         <div class="step">
-          Now recursively bundle up all the required modules starting at <span class="gold">main.js</span> into a single file with the <span class="gold">browserify</span> command:
+          Now recursively bundle up all the required modules starting at <span class="gold">main.js</span> into a single file called <span class="gold">bundle.js</span> with the <span class="gold">browserify</span> command:
         </div>
       
         <pre class="code"><span class="blue">browserify</span> <span class="gold">main.js</span> -o <span class="gold">bundle.js</span></pre>
@@ -73,12 +63,12 @@ document.body.appendChild(txt);</pre>
       
         <pre class="code"><span class="blue">&lt;script</span> src="<span class="gold">bundle.js</span>"<span class="blue">&gt;&lt;/script&gt;</span></pre>
       
-        <h1 style="font-size: 65px; margin-bottom: 15px;"><a name="more" href="#more">More</a></h1>
+        <h3><a name="more" href="#more">More</a></h3>
       
         <div class="step">
           <ul>
             <li>
-              use npm modules in the browser
+              use many of the tens of thousands of modules on NPM in the browser
             </li>
             <li>
               <span class="gold">process.nextTick()</span>,
@@ -112,19 +102,20 @@ document.body.appendChild(txt);</pre>
                 ><img src="images/testling_badge.png"></a>
               </div>
             </li>
+            <li>Use <a href="https://www.npmjs.org/package/watchify">watchify</a> for super-fast bundle rebuilds as you develop.</li>
           </ul>
         </div>
       
-        <h1 style="font-size: 65px; margin-bottom: 15px;"><a name="community" href="#community">Community</a></h1>
+        <h3><a name="community" href="#community">Community</a></h3>
       
         <div class="step">
-          Join irc.freenode.net/#browserify for help.
+          Join <span class="gold">irc.freenode.net/#browserify</span> for help, or tweet <a href="http://twitter.com/browserify">@browserify</a>.
         </div>
       </div>
     </section>
     <section id="bottom-section" class="bottom-section color-c">
       <header>
-         <h1 style="box-sizing: border-box; font-size: 65px; margin-bottom: 15px;"><a name="rel_pos_size">Install</a></h1>
+         <h1 id="install" style="box-sizing: border-box; font-size: 65px; margin-bottom: 15px;"><a name="rel_pos_size">Install</a></h1>
 
          <h2 class="subtitle" style="box-sizing: border-box; font-size: 18px; margin-bottom: 30px;">use Browserify from the Command Line</h2>
       </header>
@@ -142,16 +133,21 @@ document.body.appendChild(txt);</pre>
     
     <section class="review-section color-b">
       <header>
-        <h1 style="font-size: 65px; margin-bottom: 15px;"><a name="rel_pos_size">Who Uses Browserify</a></h1>
+        <h1 id="users" style="font-size: 65px; margin-bottom: 15px;"><a name="rel_pos_size">Who Uses Browserify</a></h1>
         <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">here are some things people have said</h2>
       </header>
       
       <div class="content" style="box-sizing: border-box; font-size: 20px; line-height: 30px; width: 720px; margin: 0 auto;">        
-        <blockquote>At Mapbox we build our website and JavaScript API with browserify. It makes the structure and modularity of our code rock.</blockquote>
+        <blockquote>At Mapbox we build our website and JavaScript API with Browserify. It makes the structure and modularity of our code rock.</blockquote>
         <p class="attrib">- <a href="https://github.com/tmcw">tmcw</a>, developer at <a href="http://mapbox.com">Mapbox</a>.</p>
         
         <blockquote>Browserify does exactly what it says it does and it does it well. I'm glad it exists.</blockquote>
         <p class="attrib">- <a href="https://github.com/zpao">zpao</a>, developer on the <a href="https://github.com/facebook/react">React</a> team at Facebook (React uses Browserify).</p>
+        
+        <blockquote>Browserify radically sped up builds, simplified builds and encouraged modularity.</blockquote>
+        <p class="attrib">- <a href="https://github.com/terinjokes">terinjokes</a>, developer at CloudFlare.</p>
+        
+        
       </div>
     </section>
     
