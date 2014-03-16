@@ -162,6 +162,7 @@ p a {
 .articles section { padding: 50px; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
+#install a { color: white;}
 
 .entry-content a, .content a { color: #B28300;}
 
