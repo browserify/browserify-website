@@ -18,7 +18,6 @@ html, body {
 }
 
 pre {
-  font-size: 18px;
   line-height: 1.6;
   background-color: #F2F4FF;
   padding: 1em 1em 1em 1em;
@@ -34,14 +33,9 @@ pre {
 .gold {
   background-color: #F2F4FF;
   padding: .2em;
-  font-size: 18px;
   margin: none;
   color: #B28300;
   font-family: monospace;
-}
-
-section {
-  padding: 0 0 100px 0;
 }
 
 .attrib { text-align: right; }
@@ -53,12 +47,6 @@ section {
   margin-bottom: -4px;
   margin-top: -15px;
 }
-
-#bottom-section, .review-section { padding: 100px 0; }
-#middle-section { padding: 50px 0; }
-#middle-section h1 { padding: 50px 0 20px 0; }
-#middle-section h3 { padding: 30px 0; font-size: 45px; text-align: center; }
-#bottom-section .code { color: black; }
 
 body {
   text-decoration: none;
@@ -91,25 +79,13 @@ h2 {
   font-weight: 400;
 }
 .subtitle {
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: .16em;  
 }
 .content h2 {
   font-style: normal;
   text-align: center;
-}
-
-.content p { 
-  margin: 40px 0;
-}
-
-.content iframe {
-  margin-bottom: 40px;
-  border: 1px solid #ddd;
-}
-
-.content hr {
-  margin-bottom: 40px;
 }
 
 div, p, blockquote, button {
@@ -218,24 +194,99 @@ button:hover, button.transparent:hover {
   color: #B28300;
 } 
 
-.color-a #top-home-image {
-  background-image:      
-    url('images/wizard-hat.png');
-  background-position: 
-    center center;
-  background-repeat: 
-    no-repeat;
-  background-size: 
-    contain;
-}
 
 .color-c {
   background-color: #B28300;
   color: #F2F4FF;
 } 
 
-#top-home-section { overflow: auto; }
-#top-home-image { width: 348px; height: 400px; }
-#top-title { padding-bottom: 30px; font-size: 84.5px; }
-#top-subtitle { font-size: 24px; line-height: 36px; width: 720px; padding-bottom: 30px; }
-.top-button { font-size: 22px; }
+#top-home-section {
+  overflow: auto;
+}
+#top-home-image {
+  margin-top: 20px;
+  width: 348px; height: 150px; 
+  background-image: url('images/wizard-hat.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1, h2, h3, p, div { padding: 0 5px; }
+
+#top-title { padding-bottom: 10px; font-size: 50px; }
+#top-subtitle { font-size: 16px; line-height: 24px; max-width: 720px; padding-bottom: 30px; }
+.top-button { font-size: 14px; }
+h1 { font-size: 30px; }
+
+.community { margin: 20px; }
+#bottom-section, .review-section { padding: 30px 0; }
+#middle-section h1 { margin-bottom: 15px; padding: 20px 0 10px 0; }
+#middle-section h3 { padding: 10px 0; font-size: 25px; text-align: center; }
+#bottom-section .code { color: black; }
+
+#middle-section { padding: 20px 0; }
+section { padding: 0 0 30px 0; }
+
+.content { font-size: 14px; max-width: 450px; margin: 0 auto; line-height: 20px; }
+pre { font-size: 14px; }
+iframe { width: 450px; }
+
+.content p { margin: 15px 0; }
+
+a:hover, button:hover { cursor: pointer; cursor: hand;}
+
+.content iframe {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.content hr {
+  margin-bottom: 15px;
+}
+
+.title { margin-bottom: 10px; }
+.subtitle { margin-bottom: 20px; }
+
+
+@media only screen and (min-height : 500px) {
+  h1 { font-size: 40px; }
+  #top-home-image { height: 250px; }
+  #top-title { padding-bottom: 15px; font-size: 65px; }
+  #top-subtitle { font-size: 20px; line-height: 24px; padding-bottom: 30px; }
+  .top-button { font-size: 18px; }
+  section { padding: 0 0 70px 0; }
+  #bottom-section, .review-section { padding: 60px 0; }
+  #middle-section { padding: 30px 0; }
+  #middle-section h1 { padding: 35px 0 15px 0; }
+  #middle-section h3 { padding: 20px 0; font-size: 30px; }
+  pre { font-size: 16px; }
+  .content { font-size: 16px; line-height: 24px; max-width: 600px; }
+  .content p { margin-top: 25px; }
+  .content iframe, .content hr { margin-bottom: 25px; }
+  iframe { width: 600px; }
+  .title { margin-bottom: 20px; }
+  .subtitle { margin-bottom: 30px; }
+  .community { margin: 30px; }
+}
+
+@media only screen and (min-height : 750px) {
+  h1 { font-size: 50px; }
+  #top-home-image { height: 350px; }
+  #top-title { paddng-bottom: 30px; font-size: 84.5px; }
+  #top-subtitle { font-size: 24px; line-height: 36px; padding-bottom: 30px; }
+  .top-button { font-size: 22px; }
+  section { padding: 0 0 100px 0; }
+  #bottom-section, .review-section { padding: 100px 0; }
+  #middle-section { padding: 50px 0; }
+  #middle-section h1 { padding: 50px 0 20px 0; }
+  #middle-section h3 { padding: 30px 0; font-size: 45px; }
+  .content { font-size: 20px; line-height: 30px; max-width: 720px; }
+  iframe { width: 720px; }
+  pre { font-size: 20px; }
+  .content p { margin-top: 40px; }
+  .content iframe, .content hr { margin-bottom: 40px; }
+  .subtitle { margin-bottom: 40px; }
+  .community { margin: 40px; }
+  
+}
