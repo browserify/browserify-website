@@ -112,14 +112,15 @@ small {
 }
 
 button {
+  padding: .2em .5em .2em .6em;
   outline: none;
   box-shadow: none;
-  padding: .2em .5em .2em .6em;
   background: none;
-  border: 5px solid;
+  border: 2px solid;
   font-family: "Adelle", georgia, serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin-bottom: 5px;
 }
 
 .trans {
@@ -273,12 +274,12 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   .subtitle { margin-bottom: 30px; }
   .community { margin: 30px; }
   .badge img { width: 300px;}
-  
 }
 
 @media only screen and (min-height : 750px) {
+  button { border: 5px solid;}
   h1 { font-size: 50px; }
-  #top-home-image { height: 350px; }
+  #top-home-image { height: 350px; width: 300px; }
   #top-title { paddng-bottom: 30px; font-size: 84.5px; }
   #top-subtitle { font-size: 24px; line-height: 36px; padding-bottom: 30px; }
   .top-button { font-size: 22px; }
