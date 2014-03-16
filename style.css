@@ -205,7 +205,7 @@ button:hover, button.transparent:hover {
 }
 #top-home-image {
   margin-top: 20px;
-  width: 348px; height: 150px; 
+  width: 200px; height: 150px; 
   background-image: url('images/wizard-hat.png');
   background-position: center center;
   background-repeat: no-repeat;
