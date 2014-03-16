@@ -241,6 +241,8 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   border: 1px solid #ddd;
 }
 
+.badge img { width: 200px;}
+
 .content hr {
   margin-bottom: 15px;
 }
@@ -268,6 +270,8 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   .title { margin-bottom: 20px; }
   .subtitle { margin-bottom: 30px; }
   .community { margin: 30px; }
+  .badge img { width: 300px;}
+  
 }
 
 @media only screen and (min-height : 750px) {
@@ -288,5 +292,6 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   .content iframe, .content hr { margin-bottom: 40px; }
   .subtitle { margin-bottom: 40px; }
   .community { margin: 40px; }
+  .badge img { width: 400px;}
   
 }
