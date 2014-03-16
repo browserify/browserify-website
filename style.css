@@ -92,6 +92,9 @@ div, p, blockquote, button {
   margin: 0;
 }
 
+#footer .content { color: black; padding: 20px; font-size: 14px; overflow: hidden; }
+#footer a { color: #e6b35a; }
+
 blockquote {
   font-family: "Adelle", georgia, serif;
   font-style: italic;
