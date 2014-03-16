@@ -38,7 +38,7 @@ pre {
   font-family: monospace;
 }
 
-.attrib { text-align: right; }
+.attrib { display: block; margin: 20px 0; text-align: right; }
 
 .filename {
   text-align: right;
