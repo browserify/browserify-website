@@ -44,6 +44,8 @@ section {
   padding: 0 0 100px 0;
 }
 
+.attrib { text-align: right; }
+
 .filename {
   text-align: right;
   font-size: 14px;
@@ -52,7 +54,7 @@ section {
   margin-top: -15px;
 }
 
-#middle-section, #bottom-section { padding: 100px 0; }
+#middle-section, #bottom-section, .review-section { padding: 100px 0; }
 #middle-section h1 { padding: 50px 0 40px 0; }
 #bottom-section .code { color: black; }
 
@@ -118,6 +120,9 @@ blockquote {
   font-weight: 400;
   font-size: 1.2em;
   line-height: 1.6em;
+  padding: 36px;
+  border: solid 8px hsl(58, 100%, 84%);
+  font-style: italic;
 }
 
 ul, ol, li { 
@@ -158,7 +163,7 @@ p a {
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
 
-.entry-content a { color: #B28300;}
+.entry-content a, .content a { color: #B28300;}
 
 .entry-content h2 {
   margin: 1em 0 15px;
