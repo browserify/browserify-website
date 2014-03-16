@@ -161,6 +161,7 @@ p a {
   font-weight: inherit;
 }
 
+.articles h2 { font-size: 40px; }
 .articles section { padding: 50px; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
@@ -237,4 +238,4 @@ button:hover, button.transparent:hover {
 #top-home-image { width: 348px; height: 400px; }
 #top-title { padding-bottom: 30px; font-size: 84.5px; }
 #top-subtitle { font-size: 24px; line-height: 36px; width: 720px; padding-bottom: 30px; }
-.top-button { font-size: 26px; }
+.top-button { font-size: 22px; }
