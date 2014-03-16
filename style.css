@@ -137,6 +137,8 @@ p a {
   font-weight: inherit;
 }
 
+article { overflow: hidden; }
+
 .articles h2 { font-size: 40px; }
 .articles section { padding: 50px; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
