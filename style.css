@@ -245,8 +245,11 @@ h1, h2, h3, p, div { padding: 0 5px; }
 
 #top-title {
   font-size: 50px;
-  margin-top: -80px;
+  margin-top: -20px;
   margin-bottom: -10px;
+}
+#top-title img {
+  width: 300px;
 }
 #top-subtitle { font-size: 16px; line-height: 24px; max-width: 720px; padding-bottom: 30px; }
 .top-button { font-size: 14px; }
@@ -313,7 +316,8 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 @media only screen and (min-height : 500px) {
   h1 { font-size: 40px; }
   #top-home-image { height: 250px; }
-  #top-title { padding-bottom: 15px; font-size: 65px; }
+  #top-title { padding-bottom: 15px; font-size: 65px; margin-top: -80px;}
+  #top-title img { width: 450px; }
   #top-subtitle { font-size: 20px; line-height: 24px; padding-bottom: 30px; }
   .top-button { font-size: 18px; }
   section { padding: 0 0 70px 0; }
@@ -337,7 +341,8 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   button { border: 5px solid;}
   h1 { font-size: 50px; }
   #top-home-image { height: 350px; width: 300px; }
-  #top-title { padding-bottom: 30px; font-size: 84.5px; }
+  #top-title { padding-bottom: 30px; font-size: 84.5px; margin-top: -80px; }
+  #top-title img { width: 650px; }
   #top-subtitle { font-size: 24px; line-height: 36px; padding-bottom: 30px; }
   .top-button { font-size: 22px; }
   section { padding: 0 0 100px 0; }
