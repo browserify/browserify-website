@@ -1,27 +1,4 @@
 {
   "name" : "browserify-website",
-  "version" : "0.0.0",
-  "scripts" : {
-    "start": {
-      "browserify.org": "node server.js"
-    },
-    "postinstall": "browserify browser/main.js -o static/bundle.js",
-    "build-dev" : "browserify browser/main.js -o static/bundle.js --watch --debug --verbose"
-  },
-  "dependencies" : {
-    "JSONStream" : "~0.6.4",
-    "ecstatic" : "~0.4.2",
-    "glog" : "~1.0.0",
-    "hyperglue" : "~0.0.0",
-    "single-page" : "~0.2.3",
-    "catch-links" : "~0.0.1",
-    "npm-package-search" : "~0.1.0",
-    "github-from-package" : "~0.0.0",
-    "mkdirp" : "~0.3.4",
-    "request": "~2.12.0",
-    "through" : "~2.1.0"
-  },
-  "devDependencies" : {
-    "browserify" : "~2.12.0"
-  }
+  "version" : "1.0.0"
 }
