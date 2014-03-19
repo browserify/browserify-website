@@ -40,9 +40,18 @@ pre {
   color: #ffffaa;
 }
 
+.yellow {
+  color: #e6b35a;
+}
+
 .lightblue {
   color: #9Cc9f1;
 }
+
+.blue {
+  color: #4C6991;
+}
+
 .content .quote {
   padding-bottom: 40px;
 }
@@ -208,7 +217,7 @@ article { overflow: hidden; }
 
 button {
   color: #3C6991;
-  background-color: #F2F4FF;
+  background-color: #f0f0f0;
   margin-right: 10px;
 }
 
@@ -231,13 +240,13 @@ button:hover, button.transparent:hover {
 }
 
 .color-a {
-  background-color: #F2F4FF;
+  background-color: #f0f0f0;
   color: #3C6991;
 } 
 
 
 .color-c {
-  background-color: #6c6991;
+  background-color: #222;
   color: #F2F4FF;
 } 
 
