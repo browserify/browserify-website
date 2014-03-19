@@ -30,11 +30,26 @@ pre {
   color: #3C6991;
 }
 
-.gold {
+.gold, .yellow, .blue {
   padding: .2em;
   margin: none;
-  color: #3C6991;
   font-family: monospace;
+}
+
+.gold {
+  color: #ffffaa;
+}
+
+.yellow {
+  color: #e6b35a;
+}
+
+.lightblue {
+  color: #9Cc9f1;
+}
+
+.blue {
+  color: #4C6991;
 }
 
 .content .quote {
@@ -167,7 +182,13 @@ article { overflow: hidden; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
 #install a { color: white;}
-#install .code { background-color: #fffdae; }
+#install .code {
+  background: #111;
+  box-shadow: 0 0 10px #08c, inset 0 0 10px #000;
+  border: 0;
+  border-radius: 9px;
+  color: #fff !important;
+}
 
 .entry-content a, .content a { color: #3C6991;}
 .review-section a { color: #e6b35a;}
@@ -196,7 +217,7 @@ article { overflow: hidden; }
 
 button {
   color: #3C6991;
-  background-color: #F2F4FF;
+  background-color: #f0f0f0;
   margin-right: 10px;
 }
 
@@ -219,13 +240,13 @@ button:hover, button.transparent:hover {
 }
 
 .color-a {
-  background-color: #F2F4FF;
+  background-color: #f0f0f0;
   color: #3C6991;
 } 
 
 
 .color-c {
-  background-color: #6c6991;
+  background-color: #222;
   color: #F2F4FF;
 } 
 
@@ -297,7 +318,7 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 .subtitle { margin-bottom: 20px; }
 
 #bottom-section header, #bottom-section .step {
-  text-shadow: 0px 0px 4px blue;
+  text-shadow: 0px 0px 30px #08c, 0px 0px 30px #08c,0px 0px 30px #08c;
 }
 
 #bottom-section {
