@@ -21,20 +21,20 @@ pre {
   line-height: 1.6;
   background-color: #F2F4FF;
   padding: 1em 1em 1em 1em;
-  border-left: solid 3px #B28300;
+  border-left: solid 3px #91643C;
   margin-right: -1em;
   overflow-x: auto;
 }
 
 .string {
-  color: #B28300;
+  color: #91643C;
 }
 
 .gold {
   background-color: #F2F4FF;
   padding: .2em;
   margin: none;
-  color: #B28300;
+  color: #91643C;
   font-family: monospace;
 }
 
@@ -149,7 +149,8 @@ article { overflow: hidden; }
 
 #install a { color: white;}
 
-.entry-content a, .content a { color: #B28300;}
+.entry-content a, .content a { color: #91643C;}
+.review-section a { color: #e6b35a;}
 
 .entry-content h2 {
   margin: 1em 0 15px;
@@ -174,7 +175,7 @@ article { overflow: hidden; }
 ============================================================= */
 
 button {
-  color: #B28300;
+  color: #91643C;
   background-color: #F2F4FF;
   margin-right: 10px;
 }
@@ -184,8 +185,8 @@ button.transparent {
 }
 
 button:hover, button.transparent:hover {
-  border-color: #B28300;
-  background-color: #B28300 !important;
+  border-color: #91643C;
+  background-color: #91643C !important;
   color: #F2F4FF;
 }
 
@@ -193,16 +194,18 @@ button:hover, button.transparent:hover {
   fill: #6f019e;
 }
 
-.color-d { color: #e6b35a; }
+.color-d {
+  color: #e6b35a;
+}
 
 .color-a {
   background-color: #F2F4FF;
-  color: #B28300;
+  color: #91643C;
 } 
 
 
 .color-c {
-  background-color: #B28300;
+  background-color: #91643C;
   color: #F2F4FF;
 } 
 

@@ -17,27 +17,44 @@
             Install
           </button>
         </a>
-        <a href="https://github.com/substack/node-browserify">
+        <a href="https://github.com/substack/node-browserify#usage">
           <button class="top-button" id="top-button2">
-            Source
+            Documentation
           </button>
         </a>
         <a href="articles.html">
           <button class="top-button" id="top-button2">
-            Articles
+            Help + Articles
           </button>
         </a>
         <a href="demos.html">
           <button class="top-button" id="top-button2">
-            Demos
+            Sweet Demos
           </button>
         </a>
       </center>
     </section>
+    <section id="bottom-section" class="bottom-section color-c">
+      <header>
+         <h1 class="title" id="install"><a name="rel_pos_size">Install</a></h1>
+
+         <h2 class="subtitle">use Browserify from the Command Line</h2>
+      </header>
+      <div id="install" class="content">
+
+        <div class="step">
+          First install <a href="http://nodejs.org/">node</a>,
+          which ships with <a href="https://npmjs.org">npm</a>.
+          Then do:
+        </div>
+      
+        <pre class="code"><span class="blue">npm</span> install -g <span class="gold">browserify</span></pre>
+      </div>
+    </section>
     <section id="middle-section" class="middle-section color-b" >
       <header>
-         <h1 class="title"><a name="rel_pos_size">Use Modules In The Browser</a></h1>
-         <h2 class="subtitle">Write your browser code with node.js-style requires</h2>
+         <h1 class="title"><a name="rel_pos_size">Hello World With Browserify</a></h1>
+         <h2 class="subtitle">Bundle up your first module</h2>
       </header>
       <div class="content">
         <p>Browsers don't have the <span class="gold">require</span> method defined, but Node.js does. With Browserify you can write code that uses <span class="gold">require</span> in the same way that you would use it in Node.</p>
@@ -123,25 +140,8 @@ console.log(uniq(data));
         </div>
       </div>
     </section>
-    <section id="bottom-section" class="bottom-section color-c">
-      <header>
-         <h1 class="title" id="install"><a name="rel_pos_size">Install</a></h1>
-
-         <h2 class="subtitle">use Browserify from the Command Line</h2>
-      </header>
-      <div id="install" class="content">
-
-        <div class="step">
-          First install <a href="http://nodejs.org/">node</a>,
-          which ships with <a href="https://npmjs.org">npm</a>.
-          Then do:
-        </div>
-      
-        <pre class="code"><span class="blue">npm</span> install -g <span class="gold">browserify</span></pre>
-      </div>
-    </section>
     
-    <section class="review-section color-b">
+    <section class="review-section color-a">
       <header>
         <h1 class="title" id="users"><a>Who Uses Browserify</a></h1>
         <h2 class="subtitle">here are some things people have said</h2>
@@ -160,7 +160,7 @@ console.log(uniq(data));
       </div>
     </section>
     
-    <section id="footer" class="color-a">
+    <section id="footer">
       <div class="content">
         <div id="banner">
           <center>
