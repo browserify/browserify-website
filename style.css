@@ -214,17 +214,21 @@ button:hover, button.transparent:hover {
   overflow: auto;
 }
 #top-home-image {
-  margin-top: 20px;
   width: 200px; height: 150px; 
   background-image: url('images/wizard-hat.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: -25px;
 }
 
 h1, h2, h3, p, div { padding: 0 5px; }
 
-#top-title { padding-bottom: 10px; font-size: 50px; }
+#top-title {
+  font-size: 50px;
+  margin-top: -80px;
+  margin-bottom: -10px;
+}
 #top-subtitle { font-size: 16px; line-height: 24px; max-width: 720px; padding-bottom: 30px; }
 .top-button { font-size: 14px; }
 h1 { font-size: 30px; }
