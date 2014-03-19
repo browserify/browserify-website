@@ -19,22 +19,21 @@ html, body {
 
 pre {
   line-height: 1.6;
-  background-color: #e6b35a;
+  background-color: #fffdae;
   padding: 1em 1em 1em 1em;
-  border-left: solid 3px #91643C;
+  border-left: solid 3px #3C6991;
   margin-right: -1em;
   overflow-x: auto;
 }
 
 .string {
-  color: #91643C;
+  color: #3C6991;
 }
 
 .gold {
-  background-color: #F2F4FF;
   padding: .2em;
   margin: none;
-  color: #91643C;
+  color: #3C6991;
   font-family: monospace;
 }
 
@@ -47,10 +46,12 @@ pre {
 }
 
 .attrib {
-  display: inline-block;
-  text-align: right;
-  background-color: white;
+  display: block;
+  text-align: left;
   max-width: 550px;
+  font-size: 16px;
+  font-style: normal;
+  margin-top: 10px;
 }
 
 .filename {
@@ -166,9 +167,9 @@ article { overflow: hidden; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
 #install a { color: white;}
-#install .code { background-color: white; }
+#install .code { background-color: #fffdae; }
 
-.entry-content a, .content a { color: #91643C;}
+.entry-content a, .content a { color: #3C6991;}
 .review-section a { color: #e6b35a;}
 
 .entry-content h2 {
@@ -194,7 +195,7 @@ article { overflow: hidden; }
 ============================================================= */
 
 button {
-  color: #91643C;
+  color: #3C6991;
   background-color: #F2F4FF;
   margin-right: 10px;
 }
@@ -204,8 +205,8 @@ button.transparent {
 }
 
 button:hover, button.transparent:hover {
-  border-color: #91643C;
-  background-color: #91643C !important;
+  border-color: #3C6991;
+  background-color: #3C6991 !important;
   color: #F2F4FF;
 }
 
@@ -219,12 +220,12 @@ button:hover, button.transparent:hover {
 
 .color-a {
   background-color: #F2F4FF;
-  color: #91643C;
+  color: #3C6991;
 } 
 
 
 .color-c {
-  background-color: #3c6991;
+  background-color: #6c6991;
   color: #F2F4FF;
 } 
 
@@ -268,7 +269,7 @@ section { padding: 0 0 30px 0; }
 }
 
 .content blockquote {
-  background-color: #ebd7c8;
+  background-color: #fffdae;
 }
 
 pre { font-size: 14px; }
@@ -300,11 +301,12 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   background-image: url(images/wizard.png);
   background-repeat: no-repeat;
   background-position: -100px 60px;
+  background-size: 150px;
 }
 
 @media only screen and (min-width : 900px) {
   #bottom-section {
-    background-position: -40px 0px;
+    background-position: 20px 20px;
   }
 }
 
@@ -315,6 +317,7 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   #top-subtitle { font-size: 20px; line-height: 24px; padding-bottom: 30px; }
   .top-button { font-size: 18px; }
   section { padding: 0 0 70px 0; }
+  #bottom-section { background-size: 225px; }
   #bottom-section, .review-section { padding: 60px 0; }
   #middle-section { padding: 30px 0; }
   #middle-section h1 { padding: 35px 0 15px 0; }
@@ -334,10 +337,11 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   button { border: 5px solid;}
   h1 { font-size: 50px; }
   #top-home-image { height: 350px; width: 300px; }
-  #top-title { paddng-bottom: 30px; font-size: 84.5px; }
+  #top-title { padding-bottom: 30px; font-size: 84.5px; }
   #top-subtitle { font-size: 24px; line-height: 36px; padding-bottom: 30px; }
   .top-button { font-size: 22px; }
   section { padding: 0 0 100px 0; }
+  #bottom-section { background-size: 300px; background-position: 20px 40px; }
   #bottom-section, .review-section { padding: 100px 0; }
   #middle-section { padding: 50px 0; }
   #middle-section h1 { padding: 50px 0 20px 0; }
