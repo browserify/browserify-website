@@ -38,7 +38,24 @@ pre {
   font-family: monospace;
 }
 
-.attrib { display: block; margin: 20px 0; text-align: right; }
+.content {
+  text-align: right;
+}
+
+.content .quote {
+  padding-bottom: 40px;
+}
+
+.content blockquote {
+  text-align: left;
+}
+
+.attrib {
+  display: inline-block;
+  text-align: right;
+  background-color: white;
+  max-width: 550px;
+}
 
 .filename {
   text-align: right;
@@ -244,10 +261,26 @@ h1 { font-size: 30px; }
 #middle-section h3 { padding: 10px 0; font-size: 25px; text-align: center; }
 #bottom-section .code { color: black; }
 
+#who-section {
+  background-image: url(images/wizard.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
 #middle-section { padding: 20px 0; }
 section { padding: 0 0 30px 0; }
 
-.content { font-size: 14px; max-width: 450px; margin: 0 auto; line-height: 20px; }
+.content {
+  font-size: 14px;
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 20px;
+}
+
+.content blockquote {
+  background-color: #ebd7c8;
+}
+
 pre { font-size: 14px; }
 iframe { width: 450px; }
 
