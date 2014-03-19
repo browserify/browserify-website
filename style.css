@@ -30,13 +30,19 @@ pre {
   color: #3C6991;
 }
 
-.gold {
+.gold, .yellow {
   padding: .2em;
   margin: none;
-  color: #3C6991;
   font-family: monospace;
 }
 
+.gold {
+  color: #ffffaa;
+}
+
+.lightblue {
+  color: #9Cc9f1;
+}
 .content .quote {
   padding-bottom: 40px;
 }
@@ -167,7 +173,13 @@ article { overflow: hidden; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
 #install a { color: white;}
-#install .code { background-color: #fffdae; }
+#install .code {
+  background: #111;
+  box-shadow: 0 0 10px #08c, inset 0 0 10px #000;
+  border: 0;
+  border-radius: 9px;
+  color: #fff !important;
+}
 
 .entry-content a, .content a { color: #3C6991;}
 .review-section a { color: #e6b35a;}
@@ -297,7 +309,7 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 .subtitle { margin-bottom: 20px; }
 
 #bottom-section header, #bottom-section .step {
-  text-shadow: 0px 0px 4px blue;
+  text-shadow: 0px 0px 30px #08c, 0px 0px 30px #08c,0px 0px 30px #08c;
 }
 
 #bottom-section {
