@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browserify</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"title="no title" charset="utf-8">
+  </head>
+  <body class="style-a articles">
+    <section id="top-home-section" class="top-section color-a">
+      <center>
+         <h1 id="top-title">Browserify Demos</h1>
+         <h3 id="top-subtitle" class="large-font">All demos on this page are self-contained and used Browserify to bundle the require()'d dependencies into a single JavaScript bundle</h3>
+         <a href="index.html">
+           <button class="top-button" id="top-button2">
+             Home
+           </button>
+         </a>
+         <a href="articles.html">
+           <button class="top-button" id="top-button2">
+             Articles
+           </button>
+         </a>
+      </center>
+    </section>
+    <section id="middle-section" class="middle-section color-b" >
+      <div class="content">
+        <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">Canvas Splitter</h2>
+        <p>This demo by @hughsk uses two modules, one that creates <a href="https://www.npmjs.org/package/lut">RGB lookup tables</a> and <a href="https://www.npmjs.org/package/canvas-splitter">another that slices</a> the color table canvas element into smaller canvases.
+        <script src="https://gist.github.com/maxogden/9576799.js?file=index.js"></script>
+        <p>Here is the above code running in an iframe</p>
+        <iframe height="315" src="http://requirebin.com/embed?gist=maxogden/9576799" frameborder="0" allowfullscreen></iframe>
+        <hr>
+
+        <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">Exploding Dots</h2>
+        <p>This demo by @anvaka uses the <a href="https://www.npmjs.org/package/ngraph.generators">ngraph.generators</a> and <a href="https://www.npmjs.org/package/ngraph.vivasvg">ngraph.vivasvg</a> modules to create an animated exploding SVG dot cluster.
+        <script src="https://gist.github.com/maxogden/9556868.js?file=index.js"></script>
+        <p>Here is the above code running in an iframe, click it to run the animation.</p>
+        <iframe height="315" src="http://requirebin.com/embed?gist=maxogden/9556868" frameborder="0" allowfullscreen></iframe>
+        <hr>
+        
+        <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">Infinite 2D Cave Generator</h2>
+        <p>This demo by @hughsk uses 7 small modules to create an explorable 2D procedurally generated cave.</p>
+        <script src="https://gist.github.com/maxogden/9557700.js?file=index.js"></script>
+        <p>Click the canvas to give it focus and then use WSAD or Arrow keys to explore.</p>
+        <iframe height="315" src="http://requirebin.com/embed?gist=maxogden/9557700" frameborder="0" allowfullscreen></iframe>
+        <hr>
+        
+        <h2 class="subtitle" style="font-size: 18px; margin-bottom: 30px;">2D velocity control</h2>
+        <p>This demo by @sethvincent uses some modules from his <a href="http://crtrdg.com/">CRTRDG</a> 2D game library.</p>
+        <script src="https://gist.github.com/maxogden/9557776.js?file=index.js"></script>
+        <p>Click the canvas to give it focus and then use WSAD keys to explore.</p>
+        <iframe height="315" src="http://requirebin.com/embed?gist=maxogden/9557776" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+  </body>
+</html>

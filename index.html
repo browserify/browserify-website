@@ -1,0 +1,176 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browserify</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"title="no title" charset="utf-8">
+  </head>
+  <body class="style-a">
+    <section id="top-home-section" class="top-section color-a">
+      <center>
+        <div id="top-home-image"></div>
+         <h1 id="top-title">Browserify</h1>
+         <h3 id="top-subtitle" class="large-font">Browserify lets you require(<span class="color-d">'modules'</span>) in the browser by bundling up all of your dependencies.</h3>
+        <a href="#install">
+          <button class="top-button" id="top-button1">
+            Install
+          </button>
+        </a>
+        <a href="https://github.com/substack/node-browserify#usage">
+          <button class="top-button" id="top-button2">
+            Documentation
+          </button>
+        </a>
+        <a href="articles.html">
+          <button class="top-button" id="top-button2">
+            Help + Articles
+          </button>
+        </a>
+        <a href="demos.html">
+          <button class="top-button" id="top-button2">
+            Sweet Demos
+          </button>
+        </a>
+      </center>
+    </section>
+    <section id="bottom-section" class="bottom-section color-c">
+      <header>
+         <h1 class="title" id="install"><a name="rel_pos_size">Install</a></h1>
+
+         <h2 class="subtitle">use Browserify from the Command Line</h2>
+      </header>
+      <div id="install" class="content">
+
+        <div class="step">
+          First install <a href="http://nodejs.org/">node</a>,
+          which ships with <a href="https://npmjs.org">npm</a>.
+          Then do:
+        </div>
+      
+        <pre class="code"><span class="blue">npm</span> install -g <span class="gold">browserify</span></pre>
+      </div>
+    </section>
+    <section id="middle-section" class="middle-section color-b" >
+      <header>
+         <h1 class="title"><a name="rel_pos_size">Hello World With Browserify</a></h1>
+         <h2 class="subtitle">Bundle up your first module</h2>
+      </header>
+      <div class="content">
+        <p>Browsers don't have the <span class="gold">require</span> method defined, but Node.js does. With Browserify you can write code that uses <span class="gold">require</span> in the same way that you would use it in Node.</p>
+        <p>Here is a tutorial on how to use Browserify on the command line to bundle up a simple file called <span class="gold">main.js</span> along with all of it's dependencies:</p>
+        <div class="filename">main.js</div>
+<pre class="code">var unique = <span class="require">require(<span class="string">'uniq'</span>)</span>;
+
+var data = <span class="string">[</span>1, 2, 2, 3, 4, 5, 5, 5, 6<span class="string">]</span>;
+
+console.log(uniq(data));
+</pre>
+        <div class="step">
+          Install the <span class="gold">uniq</span> module with <a href="https://npmjs.org">npm</a>:
+        </div>
+       
+        <pre class="code"><span class="blue">npm</span> install uniq</pre>
+
+        <div class="step">
+          Now recursively bundle up all the required modules starting at <span class="gold">main.js</span> into a single file called <span class="gold">bundle.js</span> with the <span class="gold">browserify</span> command:
+        </div>
+      
+        <pre class="code"><span class="blue">browserify</span> <span class="gold">main.js</span> -o <span class="gold">bundle.js</span></pre>
+      
+        <div class="step">
+          Browserify parses the <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> for <span class="gold">require()</span> calls to traverse the entire dependency graph of your project.
+        </div>
+      
+        <div class="step">
+          Drop a single <span class="gold">&lt;script&gt;</span> tag into your html and you're done!
+        </div>
+      
+        <pre class="code"><span class="blue">&lt;script</span> src="<span class="gold">bundle.js</span>"<span class="blue">&gt;&lt;/script&gt;</span></pre>
+      
+        <h3><a name="more" href="#more">More</a></h3>
+      
+        <div class="step">
+          <ul>
+            <li>
+              use many of the tens of thousands of modules on NPM in the browser
+            </li>
+            <li>
+              <span class="gold">process.nextTick()</span>,
+              <span class="gold">__dirname</span>,
+              and <span class="gold">__filename</span>
+              node-isms work
+            </li>
+            <li>
+              get browser versions of the node core libraries
+              <a href="http://nodejs.org/docs/latest/api/events.html">events</a>,
+              <a href="http://nodejs.org/docs/latest/api/stream.html">stream</a>,
+              <a href="http://nodejs.org/docs/latest/api/path.html">path</a>,
+              <a href="http://nodejs.org/docs/latest/api/url.html">url</a>,
+              <a href="http://nodejs.org/docs/latest/api/assert.html">assert</a>,
+              <a href="https://github.com/feross/buffer">buffer</a>,
+              <a href="http://nodejs.org/docs/latest/api/util.html">util</a>,
+              <a href="http://nodejs.org/docs/latest/api/querystring.html">querystring</a>,
+              <a href="https://github.com/substack/http-browserify">http</a>,
+              <a href="https://github.com/substack/vm-browserify">vm</a>,
+              and
+              <a href="https://github.com/dominictarr/crypto-browserify">crypto</a>
+              when you <span class="gold">require()</span> them
+            </li>
+            <li>
+              Test your modules in all the browsers with
+              <a href="http://ci.testling.com/">testling-ci</a>.
+              Many modules known to work with browserify will have a
+              <a href="http://ci.testling.com/">testling-ci</a> badge:
+              <div class="badge">
+                <a href="http://ci.testling.com"
+                ><img src="images/testling_badge.png"></a>
+              </div>
+            </li>
+            <li>Use <a href="https://www.npmjs.org/package/watchify">watchify</a> for super-fast bundle rebuilds as you develop.</li>
+          </ul>
+        </div>
+        
+        <div class="community">
+          <h3><a name="community" href="#community">Community</a></h3>
+      
+          <div class="step">
+            Join <span class="gold">irc.freenode.net/#browserify</span> for help, or tweet <a href="http://twitter.com/browserify">@browserify</a>.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="review-section color-a">
+      <header>
+        <h1 class="title" id="users"><a>Who Uses Browserify</a></h1>
+        <h2 class="subtitle">here are some things people have said</h2>
+      </header>
+      
+      <div class="content">        
+        <blockquote>At Mapbox we build our website and JavaScript API with Browserify. It makes the structure and modularity of our code rock.</blockquote>
+        <span class="attrib">- <a href="https://github.com/tmcw">tmcw</a>, developer at <a href="http://mapbox.com">Mapbox</a>.</span>
+        
+        <blockquote>Browserify does exactly what it says it does and it does it well. I'm glad it exists.</blockquote>
+        <span class="attrib">- <a href="https://github.com/zpao">zpao</a>, developer on the <a href="https://github.com/facebook/react">React</a> team at Facebook (React uses Browserify).</span>
+        
+        <blockquote>Browserify radically sped up builds, simplified builds and encouraged modularity.</blockquote>
+        <span class="attrib">- <a href="https://github.com/terinjokes">terinjokes</a>, developer at CloudFlare.</span>
+        
+      </div>
+    </section>
+    
+    <section id="footer">
+      <div class="content">
+        <div id="banner">
+          <center>
+            <a href="http://browserling.com"><img src="images/created_by_browserling_banner.png"></a>
+          </center>
+        </div>
+        <p>
+          This website is open source and you can fork it <a href="https://github.com/substack/browserify-website">on Github</a>. CSS was originally forked from <a href="https://github.com/the-gss/the-gss.github.io">the-gss</a>.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
