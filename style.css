@@ -257,12 +257,6 @@ h1 { font-size: 30px; }
 #middle-section h3 { padding: 10px 0; font-size: 25px; text-align: center; }
 #bottom-section .code { color: black; }
 
-#who-section {
-  background-image: url(images/wizard.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
-
 #middle-section { padding: 20px 0; }
 section { padding: 0 0 30px 0; }
 
@@ -298,6 +292,21 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 .title { margin-bottom: 10px; }
 .subtitle { margin-bottom: 20px; }
 
+#bottom-section header, #bottom-section .step {
+  text-shadow: 0px 0px 4px blue;
+}
+
+#bottom-section {
+  background-image: url(images/wizard.png);
+  background-repeat: no-repeat;
+  background-position: -100px 60px;
+}
+
+@media only screen and (min-width : 900px) {
+  #bottom-section {
+    background-position: -40px 0px;
+  }
+}
 
 @media only screen and (min-height : 500px) {
   h1 { font-size: 40px; }
