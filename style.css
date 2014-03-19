@@ -211,7 +211,7 @@ button:hover, button.transparent:hover {
 
 
 .color-c {
-  background-color: #91643C;
+  background-color: #3c6991;
   color: #F2F4FF;
 } 
 
@@ -220,7 +220,7 @@ button:hover, button.transparent:hover {
 }
 #top-home-image {
   width: 200px; height: 150px; 
-  background-image: url('images/wizard-hat.png');
+  background-image: url('images/wizard_hat_blue.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
