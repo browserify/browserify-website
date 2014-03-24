@@ -345,12 +345,6 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   }
 }
 
-@media only screen and (min-width : 480px) {
-  #bottom-section {
-    background-position: 20px 20px;
-  }
-}
-
 @media only screen and (min-height : 500px) {
   h1 { font-size: 40px; }
   #top-home-image { height: 250px; }
