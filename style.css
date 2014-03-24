@@ -6,7 +6,7 @@
     url('fonts/adelle.svg') format('svg')
 }
 
-*, *:after, *::before {
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -110,7 +110,7 @@ h2 {
 .subtitle {
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: .16em;  
+  letter-spacing: .16em;
 }
 .content h2 {
   font-style: normal;
@@ -127,6 +127,7 @@ div, p, blockquote, button {
   font-size: 14px;
   overflow: hidden;
 }
+#banner { text-align: center; }
 #footer a { color: #e6b35a; }
 
 blockquote {
@@ -140,7 +141,7 @@ blockquote {
   font-style: italic;
 }
 
-ul, ol, li { 
+ul, ol, li {
   margin: 14px 0;
 }
 
@@ -168,7 +169,7 @@ button {
 
 a {
   color: inherit;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 p a {
@@ -242,24 +243,27 @@ button:hover, button.transparent:hover {
 .color-a {
   background-color: #f0f0f0;
   color: #3C6991;
-} 
+}
 
 
 .color-c {
   background-color: #222;
   color: #F2F4FF;
-} 
+}
 
 #top-home-section {
+  text-align: center;
   overflow: auto;
 }
 #top-home-image {
-  width: 200px; height: 150px; 
+  width: 200px; height: 150px;
   background-image: url('images/wizard_hat_blue.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: -25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3, p, div { padding: 0 5px; }
@@ -272,7 +276,14 @@ h1, h2, h3, p, div { padding: 0 5px; }
 #top-title img {
   width: 300px;
 }
-#top-subtitle { font-size: 16px; line-height: 24px; max-width: 720px; padding-bottom: 30px; }
+#top-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 720px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .top-button { font-size: 14px; }
 h1 { font-size: 30px; }
 
@@ -334,6 +345,12 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   }
 }
 
+@media only screen and (min-width : 480px) {
+  #bottom-section {
+    background-position: 20px 20px;
+  }
+}
+
 @media only screen and (min-height : 500px) {
   h1 { font-size: 40px; }
   #top-home-image { height: 250px; }
@@ -380,5 +397,4 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   .subtitle { margin-bottom: 40px; }
   .community { margin: 40px; }
   .badge img { width: 400px;}
-  
 }
