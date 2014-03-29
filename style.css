@@ -266,6 +266,9 @@ button:hover, button.transparent:hover {
   margin-left: auto;
   margin-right: auto;
 }
+#top-home-section > a:last-child button {
+  margin-right: 0;
+}
 
 h1, h2, h3, p, div { padding: 0 5px; }
 
