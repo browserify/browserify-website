@@ -266,7 +266,7 @@ button:hover, button.transparent:hover {
   margin-left: auto;
   margin-right: auto;
 }
-#top-home-section > a:last-child button {
+#top-home-section > a:last-of-type button {
   margin-right: 0;
 }
 
