@@ -18,6 +18,7 @@ html, body {
 }
 
 pre {
+  width: 100%;
   line-height: 1.6;
   background-color: #fffdae;
   padding: 1em 1em 1em 1em;
