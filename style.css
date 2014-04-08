@@ -6,7 +6,7 @@
     url('fonts/adelle.svg') format('svg')
 }
 
-*, *:after, *::before {
+*, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -18,6 +18,7 @@ html, body {
 }
 
 pre {
+  width: 100%;
   line-height: 1.6;
   background-color: #fffdae;
   padding: 1em 1em 1em 1em;
@@ -30,11 +31,26 @@ pre {
   color: #3C6991;
 }
 
-.gold {
+.gold, .yellow, .blue {
   padding: .2em;
   margin: none;
-  color: #3C6991;
   font-family: monospace;
+}
+
+.gold {
+  color: #ffffaa;
+}
+
+.yellow {
+  color: #e6b35a;
+}
+
+.lightblue {
+  color: #9Cc9f1;
+}
+
+.blue {
+  color: #4C6991;
 }
 
 .content .quote {
@@ -95,7 +111,7 @@ h2 {
 .subtitle {
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: .16em;  
+  letter-spacing: .16em;
 }
 .content h2 {
   font-style: normal;
@@ -112,6 +128,7 @@ div, p, blockquote, button {
   font-size: 14px;
   overflow: hidden;
 }
+#banner { text-align: center; }
 #footer a { color: #e6b35a; }
 
 blockquote {
@@ -125,7 +142,7 @@ blockquote {
   font-style: italic;
 }
 
-ul, ol, li { 
+ul, ol, li {
   margin: 14px 0;
 }
 
@@ -153,7 +170,7 @@ button {
 
 a {
   color: inherit;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 p a {
@@ -167,7 +184,13 @@ article { overflow: hidden; }
 .articles #middle-section, .articles #bottom-section { padding: 50px 0; }
 
 #install a { color: white;}
-#install .code { background-color: #fffdae; }
+#install .code {
+  background: #111;
+  box-shadow: 0 0 10px #08c, inset 0 0 10px #000;
+  border: 0;
+  border-radius: 9px;
+  color: #fff !important;
+}
 
 .entry-content a, .content a { color: #3C6991;}
 .review-section a { color: #e6b35a;}
@@ -196,7 +219,7 @@ article { overflow: hidden; }
 
 button {
   color: #3C6991;
-  background-color: #F2F4FF;
+  background-color: #f0f0f0;
   margin-right: 10px;
 }
 
@@ -219,26 +242,32 @@ button:hover, button.transparent:hover {
 }
 
 .color-a {
-  background-color: #F2F4FF;
+  background-color: #f0f0f0;
   color: #3C6991;
-} 
+}
 
 
 .color-c {
-  background-color: #6c6991;
+  background-color: #222;
   color: #F2F4FF;
-} 
+}
 
 #top-home-section {
+  text-align: center;
   overflow: auto;
 }
 #top-home-image {
-  width: 200px; height: 150px; 
+  width: 200px; height: 150px;
   background-image: url('images/wizard_hat_blue.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: -25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#top-home-section > a:last-of-type button {
+  margin-right: 0;
 }
 
 h1, h2, h3, p, div { padding: 0 5px; }
@@ -251,7 +280,14 @@ h1, h2, h3, p, div { padding: 0 5px; }
 #top-title img {
   width: 300px;
 }
-#top-subtitle { font-size: 16px; line-height: 24px; max-width: 720px; padding-bottom: 30px; }
+#top-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 720px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .top-button { font-size: 14px; }
 h1 { font-size: 30px; }
 
@@ -297,7 +333,7 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 .subtitle { margin-bottom: 20px; }
 
 #bottom-section header, #bottom-section .step {
-  text-shadow: 0px 0px 4px blue;
+  text-shadow: 0px 0px 30px #08c, 0px 0px 30px #08c,0px 0px 30px #08c;
 }
 
 #bottom-section {
@@ -359,5 +395,4 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
   .subtitle { margin-bottom: 40px; }
   .community { margin: 40px; }
   .badge img { width: 400px;}
-  
 }
