@@ -279,6 +279,7 @@ h1, h2, h3, p, div { padding: 0 5px; }
 }
 #top-title img {
   width: 300px;
+  max-width: 100%;
 }
 #top-subtitle {
   font-size: 16px;
