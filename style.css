@@ -131,6 +131,12 @@ div, p, blockquote, button {
 #banner { text-align: center; }
 #footer a { color: #e6b35a; }
 
+@media only screen and (max-width: 548px) {
+    #banner-img {
+        width: 100%;
+    }
+}
+
 blockquote {
   font-family: "Adelle", georgia, serif;
   font-style: italic;
@@ -262,9 +268,7 @@ button:hover, button.transparent:hover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: -25px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 0 auto;
 }
 #top-home-section > a:last-of-type button {
   margin-right: 0;
@@ -285,9 +289,11 @@ h1, h2, h3, p, div { padding: 0 5px; }
   font-size: 16px;
   line-height: 24px;
   max-width: 720px;
-  padding-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0 20px 30px 20px;
+  margin: 0 auto;
+}
+#top-nav {
+  padding: 0 20px;
 }
 .top-button { font-size: 14px; }
 h1 { font-size: 30px; }

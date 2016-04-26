@@ -13,26 +13,28 @@
          <img src="images/browserify.png">
        </h1>
        <h3 id="top-subtitle" class="large-font">Browserify lets you require(<span class="color-d">'modules'</span>) in the browser by bundling up all of your dependencies.</h3>
-      <a href="#install">
-        <button class="top-button" id="top-button1">
-          Install
-        </button>
-      </a>
-      <a href="https://github.com/substack/node-browserify#usage">
-        <button class="top-button" id="top-button2">
-          Documentation
-        </button>
-      </a>
-      <a href="articles.html">
-        <button class="top-button" id="top-button3">
-          Help + Articles
-        </button>
-      </a>
-      <a href="demos.html">
-        <button class="top-button" id="top-button4">
-          Sweet Demos
-        </button>
-      </a>
+      <nav id="top-nav">
+          <a href="#install">
+            <button class="top-button" id="top-button1">
+              Install
+            </button>
+          </a>
+          <a href="https://github.com/substack/node-browserify#usage">
+            <button class="top-button" id="top-button2">
+              Documentation
+            </button>
+          </a>
+          <a href="articles.html">
+            <button class="top-button" id="top-button3">
+              Help + Articles
+            </button>
+          </a>
+          <a href="demos.html">
+            <button class="top-button" id="top-button4">
+              Sweet Demos
+            </button>
+          </a>
+      </nav>
     </section>
     <section id="bottom-section" class="bottom-section color-c">
       <header>
@@ -179,14 +181,14 @@ console.log(unique(data));
     <section id="footer" class="color-c">
       <div class="content">
         <div id="banner">
-          <a href="http://browserling.com"><img src="images/created_by_browserling_banner.png"></a>
+          <a href="http://browserling.com"><img src="images/created_by_browserling_banner.png" id="banner-img"></a>
         </div>
         <p>
           This website is open source and you can fork it <a href="https://github.com/substack/browserify-website">on GitHub</a>. CSS was originally forked from <a href="https://github.com/the-gss/the-gss.github.io">the-gss</a>.
         </p>
       </div>
     </section>
-    
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
