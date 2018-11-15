@@ -339,6 +339,35 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 .title { margin-bottom: 10px; }
 .subtitle { margin-bottom: 20px; }
 
+#sponsor {
+  padding: 0;
+  margin: 0;
+}
+.tidelift-banner {
+  background-color: #626980;
+  color: #ffffff;
+  font: 14px "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+  padding: 6px 10px;
+  display: inline-block;
+  width: 100%;
+}
+.tidelift-banner img {
+  display: inline-block;
+  height: 1.428em;
+  width: 1.428em;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+@media (min-width: 900px) {
+  #sponsor {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+  .tidelift-banner { width: auto; }
+}
+
 #bottom-section header, #bottom-section .step {
   text-shadow: 0px 0px 30px #08c, 0px 0px 30px #08c,0px 0px 30px #08c;
 }
