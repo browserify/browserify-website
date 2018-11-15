@@ -346,13 +346,15 @@ a:hover, button:hover { cursor: pointer; cursor: hand;}
 #bottom-section {
   background-image: url(images/wizard.png);
   background-repeat: no-repeat;
-  background-position: -100px 60px;
+  background-position: bottom 30px center;
   background-size: 150px;
+  padding-bottom: 230px;
 }
 
 @media only screen and (min-width : 900px) {
   #bottom-section {
     background-position: 20px 20px;
+    padding-bottom: 30px;
   }
 }
 
