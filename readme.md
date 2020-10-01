@@ -1,4 +1,4 @@
-# browserify-website
+# An-amazing-browserify-website
 
 the static site that is http://browserify.org
 
