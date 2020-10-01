@@ -17,7 +17,7 @@ We like pull requests that:
 Please don't send pull requests that do the following:
 
 - Reorganize css
-- Rptimize images
+- Roptimize images
 - Refactor without making any substantive changes to the website
 
 The browserify website currently does its job well and doesn't have any scaling problems. The overhead of merging in small pull requests often just isn't worth it for us. 
