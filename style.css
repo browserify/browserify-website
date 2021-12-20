@@ -1,11 +1,3 @@
-@font-face {
-  font-family:'Adelle';
-  src:url('fonts/adelle.eot') format('embedded-opentype'),
-    url('fonts/adelle.woff') format('woff'),
-    url('fonts/adelle.ttf') format('truetype'),
-    url('fonts/adelle.svg') format('svg')
-}
-
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -80,7 +72,7 @@ pre {
 
 body {
   text-decoration: none;
-  font-family: "Adelle",sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 300;
 }
@@ -90,13 +82,13 @@ body {
 }
 
 em {
-  font-family: "Adelle",sans-serif;
+  font-family: sans-serif;
   font-style: italic;
   font-weight: 500;
 }
 header, h1 {
   text-align: center;
-  font-family: "Adelle", georgia,serif;
+  font-family:  georgia,serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -105,7 +97,7 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 h2 {
-  font-family: "Adelle", georgia,serif;
+  font-family:  georgia,serif;
   font-weight: 400;
 }
 .subtitle {
@@ -138,7 +130,7 @@ div, p, blockquote, button {
 }
 
 blockquote {
-  font-family: "Adelle", georgia, serif;
+  font-family:  georgia, serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1.2em;
@@ -162,7 +154,7 @@ button {
   box-shadow: none;
   background: none;
   border: 2px solid;
-  font-family: "Adelle", georgia, serif;
+  font-family:  georgia, serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 5px;
